@@ -1,0 +1,30 @@
+nav {
+    width: 120px;
+    height: 100vh;
+    flex-direction: row;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgb(215, 218, 250);
+    .nav-links {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        .nav-item a {
+            display: inline-block;
+            text-decoration: none;
+            color: black;
+            padding: 4em 0;
+
+            &:hover {
+                color: cadetblue;
+            }
+            &:active {
+                font-weight: bold;
+            }
+        }
+    }
+}
