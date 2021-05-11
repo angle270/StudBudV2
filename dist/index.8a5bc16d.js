@@ -442,7 +442,94 @@ id) /*: string*/
 }
 
 },{}],"4OAbU":[function(require,module,exports) {
+var _componentsNavigation = require('./components/navigation');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
+const links = document.querySelectorAll('nav > ul > li > a');
+const pages = document.querySelectorAll('.page-container');
+var nav = new _componentsNavigationDefault.default(links, pages);
+nav.getLinks();
+nav.links.forEach(function (link) {
+  link.addEventListener('click', function () {
+    let pageId = nav.getHash(link);
+    nav.setPage(pageId);
+  });
+});
 
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2K1cj":[function(require,module,exports) {
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+class Navigation {
+  constructor(links, pages) {
+    this.links = links;
+    this.pages = pages;
+    this.currentPage = null;
+  }
+  getLinks() {
+    console.log(this.links);
+  }
+  setPage(pageId) {
+    this.currentPage = pageId;
+    console.log(this.currentPage);
+    this.links.forEach(link => {
+      link.classList.remove('active');
+      if (this.getHash(link) === pageId) {
+        link.classList.add('active');
+      }
+    });
+    this.pages.forEach(page => {
+      page.style.display = 'none';
+    });
+    document.getElementById(pageId).style.display = 'block';
+  }
+  getHash(link) {
+    return link.href.split("#")[1];
+  }
+}
+exports.default = Navigation;
+
+},{"@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"5gA8y":[function(require,module,exports) {
+"use strict";
+
+exports.interopDefault = function (a) {
+  return a && a.__esModule ? a : {
+    default: a
+  };
+};
+
+exports.defineInteropFlag = function (a) {
+  Object.defineProperty(a, '__esModule', {
+    value: true
+  });
+};
+
+exports.exportAll = function (source, dest) {
+  Object.keys(source).forEach(function (key) {
+    if (key === 'default' || key === '__esModule') {
+      return;
+    } // Skip duplicate re-exports when they have the same value.
+
+
+    if (key in dest && dest[key] === source[key]) {
+      return;
+    }
+
+    Object.defineProperty(dest, key, {
+      enumerable: true,
+      get: function () {
+        return source[key];
+      }
+    });
+  });
+  return dest;
+};
+
+exports.export = function (dest, destName, get) {
+  Object.defineProperty(dest, destName, {
+    enumerable: true,
+    get: get
+  });
+};
 },{}]},["27Rzb","4OAbU"], "4OAbU", "parcelRequirefe09")
 
 //# sourceMappingURL=index.8a5bc16d.js.map

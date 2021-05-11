@@ -1,0 +1,15 @@
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+_parcelHelpers.defineInteropFlag(exports);
+class Navigation {
+  // Function to build the object, taking in input paramters when called in script.js
+  constructor(links, pages) {
+    this.links = links;
+    this.pages = pages;
+    this.currentPage = null;
+  }
+  /*Output all links from DOM element selector*/
+  getLinks() {
+    console.log(this.links);
+  }
+}
+exports.default = Navigation;

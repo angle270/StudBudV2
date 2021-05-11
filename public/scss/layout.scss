@@ -1,3 +1,14 @@
 .app-container {
     padding-left: 120px;
 }
+
+.page-container {
+    margin: 0;
+
+    &#home {
+        text-align: center;
+    }
+    &:not(#home) {
+        display: none;
+    }
+}

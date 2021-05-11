@@ -1,0 +1,7 @@
+var _componentsNavigation = require('./components/navigation');
+var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
+var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
+const links = document.querySelector('nav > ul > li > a');
+const pages = "";
+var nav = new _componentsNavigationDefault.default(links, pages);
+nav.getLinks();

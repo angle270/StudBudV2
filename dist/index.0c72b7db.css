@@ -45,10 +45,10 @@ nav {
   position: absolute;
   top: 0;
   left: 0;
-  background-color: antiquewhite;
   display: flex;
   justify-content: space-around;
   align-items: center;
+  background-color: #d7dafa;
 }
 nav .nav-links {
   list-style: none;
@@ -59,13 +59,25 @@ nav .nav-links .nav-item a {
   display: inline-block;
   text-decoration: none;
   color: black;
-  padding: 1em 2em;
+  padding: 2em 0;
 }
 nav .nav-links .nav-item a:hover {
   color: cadetblue;
 }
 nav .nav-links .nav-item a:active {
   font-weight: bold;
+}
+.app-container {
+  padding-left: 120px;
+}
+.page-container {
+  margin: 4em;
+}
+.page-container#home {
+  text-align: center;
+}
+.page-container:not(#home) {
+  display: none;
 }
 /* Box sizing rules */
 *,
