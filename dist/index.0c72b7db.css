@@ -40,12 +40,13 @@ small, .text_small {
 }
 nav {
   width: 120px;
-  height: 100vh;
+  height: 75vh;
   flex-direction: row;
   position: absolute;
-  top: 0;
-  left: 0;
+  top: 30px;
+  left: 10px;
   display: flex;
+  border-radius: 40px;
   justify-content: space-around;
   align-items: center;
   background-color: #d7dafa;
@@ -60,6 +61,7 @@ nav .nav-links .nav-item a {
   text-decoration: none;
   color: black;
   padding: 2em 0;
+  text-align: center;
 }
 nav .nav-links .nav-item a:hover {
   color: cadetblue;
