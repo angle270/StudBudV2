@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>StudBud</title>
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app-container">
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href="#tasklist" class="active">Tasks</a></li>
+			<li class="nav-item"><a href="#kanban">Kanban</a></li>
+			<li class="nav-item"><a href="#pomodoro">Pomodoro</a></li>
+			<li class="nav-item"><a href="#timer">Timer</a></li>
+			<li class="nav-item"><a href="#acronym">Acronym</a></li>
+		</ul>
+	</nav>
+
+	<div id="tasklist" class="page-container">
+		<h1>Hello World Wide Web</h1>
+		<p>This time with <a href="a72065957fe902f40f1ba688f0450f00">Express</a> + <a href="8d8dc26c6986d8d40d8f3b9fe89723c6">Parcel</a> + <a href="8e6645975e6ba0cb20bed489a75ac873">SASS (SCSS)</a>!</p>		
+	</div>
+
+	<div id="kanban" class="page-container">
+		<h1>Kanban Board</h1>
+	</div>
+
+	<div id="pomodoro" class="page-container">
+		<h1>Pomodoro</h1>
+	</div>
+
+	<div id="timer" class="page-container">
+		<h1>Timer</h1>
+	</div>
+
+	<div id="acronym" class="page-container">
+		<h1>Acronym Maker</h1>
+	</div>
+
+
+	<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="452b5f21b7388465e521bc211c4f4098">
+	</script>
+</body>
+
+</html>

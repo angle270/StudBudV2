@@ -35,7 +35,7 @@
 80C:\Users\angel\Local Code\StudBudV2\node_modules\source-map\lib\binary-search.js132649338130000000 0
 48C:\Users\angel\Local Code\StudBudV2\package.json132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\fp\__.js132649338130000000 0
-40C:\Users\angel\Local Code\StudBudV2\dist132653602024529620 1
+40C:\Users\angel\Local Code\StudBudV2\dist132653613758809175 1
 75C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\pseudo132651852261977931 1
 105C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-minify-params\node_modules\postcss\lib\vendor.js132649338130000000 0
 46C:\Users\angel\Local Code\StudBudV2\.gitignore132651855244555374 0
@@ -124,7 +124,7 @@
 54C:\Users\angel\Local Code\StudBudV2\node_modules\acorn132651851269432450 1
 78C:\Users\angel\Local Code\StudBudV2\node_modules\@parcel\transformer-babel\src132651851136753583 1
 74C:\Users\angel\Local Code\StudBudV2\node_modules\nanoid\async\package.json132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\public\scss\navigation.scss132653595043505163 0
+63C:\Users\angel\Local Code\StudBudV2\public\scss\navigation.scss132653609417818037 0
 75C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-minify-params\dist132651853850306743 1
 102C:\Users\angel\Local Code\StudBudV2\node_modules\jsdom\lib\jsdom\living\generated\CanPlayTypeResult.js132649338130000000 0
 83C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\es\object\lookup-getter.js132649338130000000 0
@@ -136,7 +136,7 @@
 70C:\Users\angel\Local Code\StudBudV2\node_modules\resolve\.eslintignore132649338130000000 0
 68C:\Users\angel\Local Code\StudBudV2\node_modules\has-symbols\.github132651852734396150 1
 53C:\Users\angel\Local Code\StudBudV2\public\components132651885938363461 1
-53C:\Users\angel\Local Code\StudBudV2\public\index.html132653602022567235 0
+53C:\Users\angel\Local Code\StudBudV2\public\index.html132653613656470177 0
 109C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-modules-values\node_modules\postcss\lib\container.js132649338130000000 0
 69C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\es\README.md132649338130000000 0
 95C:\Users\angel\Local Code\StudBudV2\node_modules\@babel\plugin-syntax-numeric-separator\LICENSE132649338130000000 0
@@ -240,10 +240,10 @@
 108C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-discard-duplicates\node_modules\postcss\lib\list.js132649338130000000 0
 75C:\Users\angel\Local Code\StudBudV2\node_modules\regenerate\LICENSE-MIT.txt132649338130000000 0
 73C:\Users\angel\Local Code\StudBudV2\node_modules\terser\tools\terser.d.ts132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\public\scss\typography.scss132653601888210632 0
+63C:\Users\angel\Local Code\StudBudV2\public\scss\typography.scss132653613536173542 0
 98C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-discard-empty\node_modules\supports-color132651853764302664 1
 80C:\Users\angel\Local Code\StudBudV2\node_modules\fast-glob\out\providers\filters132651852667022811 1
-67C:\Users\angel\Local Code\StudBudV2\public\components\navigation.js132651909920040455 0
+67C:\Users\angel\Local Code\StudBudV2\public\components\navigation.js132653604832893813 0
 94C:\Users\angel\Local Code\StudBudV2\node_modules\resolve\test\resolver\dot_slash_main\index.js132649338130000000 0
 92C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\internals\array-buffer-view-core.js132649338130000000 0
 106C:\Users\angel\Local Code\StudBudV2\node_modules\@babel\types\lib\validators\buildMatchMemberExpression.js132649338130000000 0
@@ -13929,7 +13929,7 @@
 67C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.eslintrc132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.nycrc132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\CHANGELOG.md132649338130000000 0
-62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132653602024519687 0
+62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132653613758799203 0
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\index.js132649338130000000 0
 84C:\Users\angel\Local Code\StudBudV2\node_modules\caniuse-lite\data\features\proxy.js132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\node\HexColor.js132649338130000000 0
@@ -14127,7 +14127,7 @@
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\LICENSE132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\highlight.js\scss\androidstudio.scss132649338130000000 0
 71C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\package.json132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132653602024509663 0
+63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132653613758799203 0
 73C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\test\.eslintrc132649338130000000 0
 83C:\Users\angel\Local Code\StudBudV2\node_modules\cssnano-util-raw-cache\LICENSE-MIT132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\caller-path\readme.md132649338130000000 0
@@ -21132,6 +21132,6 @@
 59C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.cmd132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.ps1132649338130000000 0
-59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132653602024479742 0
-58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132653602024479742 0
-51C:\Users\angel\Local Code\StudBudV2\dist\index.html132653602024479742 0
+59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132653613758749550 0
+58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132653613758749550 0
+51C:\Users\angel\Local Code\StudBudV2\dist\index.html132653613758739364 0
