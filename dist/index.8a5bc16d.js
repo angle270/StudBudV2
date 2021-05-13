@@ -445,10 +445,13 @@ id) /*: string*/
 var _componentsNavigation = require('./components/navigation');
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
-const links = document.querySelectorAll('nav > ul > li > a');
+require('./components/tasklist');
+// DOM elements for links and pages
+const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
+// Instantiate a new instance of the Navigation class using the DOM elements above as parameters
 var nav = new _componentsNavigationDefault.default(links, pages);
-nav.getLinks();
+// Event listeners for all links
 nav.links.forEach(function (link) {
   link.addEventListener('click', function () {
     let pageId = nav.getHash(link);
@@ -456,32 +459,39 @@ nav.links.forEach(function (link) {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
+// Creating navigation class structure
 class Navigation {
+  // Function to build the object, taking in input paramters when called in script.js
   constructor(links, pages) {
     this.links = links;
     this.pages = pages;
     this.currentPage = null;
   }
+  /*Output all links from DOM element selector*/
   getLinks() {
     console.log(this.links);
   }
+  /*Set the current page when a user clicks on a link*/
   setPage(pageId) {
     this.currentPage = pageId;
     console.log(this.currentPage);
+    // Manages state for the current active link
     this.links.forEach(link => {
       link.classList.remove('active');
       if (this.getHash(link) === pageId) {
         link.classList.add('active');
       }
     });
+    // Manages state for the current visible page
     this.pages.forEach(page => {
       page.style.display = 'none';
     });
-    document.getElementById(pageId).style.display = 'block';
+    document.getElementById(pageId).style.display = "block";
   }
+  /*Function to separate pageId from URL, using the '#' to split the string*/
   getHash(link) {
     return link.href.split("#")[1];
   }
@@ -530,6 +540,108 @@ exports.export = function (dest, destName, get) {
     get: get
   });
 };
+},{}],"Rj9Cl":[function(require,module,exports) {
+// Basic form DOM elements
+const form = document.getElementById("taskform");
+const button = document.querySelector("#taskform > button")
+
+// Selector for the tasklist output
+var tasklist = document.querySelector("#tasklist > ul");
+
+// DOM elements for the task input fields
+var taskInput = document.getElementById("taskInput");
+var dueDateInput = document.getElementById("dueDateInput");
+var completionTimeInput = document.getElementById("completionTimeInput");
+var estimatedTimeInput = document.getElementById("estimatedTimeInput");
+var priorityInput = document.getElementById("priorityInput");
+
+// Form submission event listener
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let task = taskInput.value;
+    let dueDate = dueDateInput.value;
+    let completionTime = completionTimeInput.value;
+    let estimatedTime = estimatedTimeInput.value;
+    let priorityRating = priorityInput.options[priorityInput.selectedIndex].value;
+    if (task) {
+        addTask(task, dueDate, estimatedTime, priorityRating, completionTime, false);
+    }
+})
+
+// Create global array to track tasks
+var taskListArray = [];
+
+// Function to add task with user inputs as parameters
+function addTask(taskDescription, dueDate, estimatedTime, priorityRating, completionTime, completionStatus) {
+    let d = new Date();
+    let dateCreated = d.getFullYear();
+    let task = {
+        id: Date.now(),
+        taskDescription,
+        dueDate,
+        dateCreated,
+        estimatedTime,
+        completionTime,
+        priorityRating,
+        estimatedTime,
+        completionStatus
+    };
+    taskListArray.push(task);
+    console.log(taskListArray);
+    renderTask(task);
+}
+
+// Function to display task on screen
+function renderTask(task) {
+
+    // Call function - checks if a task has been added
+    updateEmpty();
+
+    // Create HTML elements
+    let item = document.createElement("li");
+    item.setAttribute('data-id', task.id);
+    item.innerHTML = "<p>" + task.taskDescription + "</p>" + "<p>" + "Due: " + task.dueDate + " " + task.completionTime + "</p>" + "<p>" + "Estimated completion: " + task.estimatedTime + "min" + "</p>" + "<p>" + "Status: " + task.priorityRating + "</p>";
+    tasklist.appendChild(item);
+
+    // Extra Task DOM elements
+    let delButton = document.createElement("button");
+    let delButtonText = document.createTextNode("Delete Task");
+    delButton.appendChild(delButtonText);
+    item.appendChild(delButton);
+
+
+    // Event Listeners for DOM elements
+    delButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        let id = event.target.parentElement.getAttribute('data-id');
+        let index = taskListArray.findIndex(task => task.id === Number(id));
+        removeItemFromArray(taskListArray, index)
+        console.log(taskListArray);
+        updateEmpty();
+        item.remove();
+    })
+
+    // Clear the input form
+    form.reset();
+}
+
+// Function to remove item from array
+function removeItemFromArray(arr, index) {
+    if (index > -1) {
+        arr.splice(index, 1)
+    }
+    return arr;
+}
+
+
+// Function to hide the 'you haven't added any tasks' text
+function updateEmpty() {
+    if (taskListArray.length > 0) {
+        document.getElementById('emptyList').style.display = 'none';
+    } else {
+        document.getElementById('emptyList').style.display = 'block';
+    }
+}
 },{}]},["27Rzb","4OAbU"], "4OAbU", "parcelRequirefe09")
 
 //# sourceMappingURL=index.8a5bc16d.js.map

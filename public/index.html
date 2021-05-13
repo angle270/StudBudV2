@@ -11,7 +11,7 @@
 <body class="app-container">
 	<nav class = "top-nav">
 		<ul class = "nav-links">
-			<li class="nav-item"><a href ="#tasklist" class="active" >Tasks</a></li>
+			<li class="nav-item"><a href ="#tasks" class = "active">Tasks</a></li>
 			<li class="nav-item"><a href ="#kanban">Kanban</a></li>
 			<li class="nav-item"><a href ="#pomodoro">Pomodoro</a></li>
 			<li class="nav-item"><a href ="#timer">Timer</a></li>
@@ -19,9 +19,43 @@
 		</ul>
 	</nav>
 
-	<div id="tasklist" class = "page-container">
-		<h1>Hello World Wide Web</h1>
-		<p>This time with <a href="https://expressjs.com/">Express</a> + <a href="https://v2.parceljs.org/">Parcel</a> + <a href="https://sass-lang.com/">SASS (SCSS)</a>!</p>		
+	<div id="tasks" class = "page-container">
+		<h1>Task List</h1>
+		<div id="task-grid">
+			<form id="taskform">
+				<label for="task">Task:</label>
+				<input type="text" name="task" id="taskInput" required>
+
+				<!-- Date input -->
+				<label for="dueDate">Due Date: </label>
+				<input type="date" name="dueDate" id="dueDateInput">
+
+				<!-- Time input -->
+				<label for="completionTime">Completion Time: </label>
+				<input type="time" name="completionTime" id="completionTimeInput">
+
+				<label for="estimatedTime">Estimated completion time (in mins):</label>
+				<input type="number" name="estimatedTime" id="estimatedTimeInput">
+				<!-- Priority -->
+
+
+				<label for="priority">Task Priority:</label>
+				<select name="prority" id="priorityInput">
+					<option value="">Select one</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+
+				<br>
+
+				<button type="submit">Submit</button>
+			</form>
+			<div id="tasklist">
+				<p id="emptyList">You have not added any tasks yet.</p>
+				<ul></ul>
+			</div>
+		</div>
 	</div>
 
 	<div id = "kanban" class= "page-container">
