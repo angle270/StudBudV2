@@ -1,0 +1,39 @@
+// Basic form DOM elements
+const form = document.getElementById("acronymform");
+const button = document.querySelector("#acronymform > button")
+
+// Selector for the acronym list output
+var acronymlist = document.querySelector("#acronymlist > ul");
+
+// DOM elements for the input fields
+var wordkInput = document.getElementById("wordkInput");
+var descInput = document.getElementById("descInput");
+
+// Form submission event listener
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let word = wordInput.value;
+    let desc = descInput.value;
+    if (acronym) {
+        addAcronym(acronym, word, desc);
+    }
+})
+
+// Create global array to track acronyms
+var acronymListArray = [];
+
+// Function to add task with user inputs as parameters
+function addAcronym(acronymWord, acronymDescription) {
+    let d = new Date();
+    let dateCreated = d.getFullYear();
+    let acronym = {
+        id: Date.now(),
+        acronymWord,
+        acronymDescription
+    };
+    acronymListArray.push(acronym);
+    console.log(acronymListArray);
+
+}
+
+

@@ -1,0 +1,24 @@
+#acronym-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "acronymform acronymlist";
+}
+
+#acronymform {
+    grid-area: acronymform;
+    max-width: 300px;
+    margin: 0 auto;
+    label {
+        display: block;
+        width: 100%;
+    }
+}
+
+#acronymlist {
+    grid-area: acronymlist;
+
+    ul {
+        list-style: none;
+    }
+}

@@ -140,4 +140,25 @@ img {
 #tasklist ul {
   list-style: none;
 }
+#acronym-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "acronymform acronymlist";
+}
+#acronymform {
+  grid-area: acronymform;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#acronymform label {
+  display: block;
+  width: 100%;
+}
+#acronymlist {
+  grid-area: acronymlist;
+}
+#acronymlist ul {
+  list-style: none;
+}
 /*# sourceMappingURL=index.0c72b7db.css.map */

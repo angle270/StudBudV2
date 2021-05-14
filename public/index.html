@@ -49,10 +49,10 @@
 
 				<br>
 
-				<button type="submit">Submit</button>
+				<button type="submit">Add Task</button>
 			</form>
 			<div id="tasklist">
-				<p id="emptyList">You have not added any tasks yet.</p>
+				<p id="emptyTaskList">You have not added any tasks yet.</p>
 				<ul></ul>
 			</div>
 		</div>
@@ -72,6 +72,23 @@
 
 	<div id = "acronym" class= "page-container">
 		<h1>Acronym Maker</h1>
+		<div id = "acronym-grid">
+			<form id = "acronymform">
+				<!-- Word input -->
+				<label for="word">Word:</label>
+				<input type="text" name="word" id="wordInput" required>
+
+				<!-- Description input -->
+				<label for="desc">Description:</label>
+				<textarea name="desc" id="descInput" cols="30" rows="10"></textarea>
+
+				<button type="submit">Add Acronym</button>
+			</form>
+			<div id="acronymlist">
+				<p id="emptyAcronymList">You have not added any acronyms yet.</p>
+				<ul></ul>
+			</div>
+		</div>
 	</div>
 
 

@@ -446,6 +446,7 @@ var _componentsNavigation = require('./components/navigation');
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavigation);
 require('./components/tasklist');
+require('./components/acronym');
 // DOM elements for links and pages
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
@@ -459,7 +460,7 @@ nav.links.forEach(function (link) {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/acronym":"2REkG"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 // Creating navigation class structure
@@ -600,7 +601,7 @@ function renderTask(task) {
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute('data-id', task.id);
-    item.innerHTML = "<p>" + task.taskDescription + "</p>" + "<p>" + "Due: " + task.dueDate + " " + task.completionTime + "</p>" + "<p>" + "Estimated completion: " + task.estimatedTime + "min" + "</p>" + "<p>" + "Status: " + task.priorityRating + "</p>";
+    item.innerHTML = "<p>" + task.taskDescription + "</p>" + "<p>" + "Due: " + task.dueDate + " " + task.completionTime + "</p>" + "<p>" + "Estimated completion: " + task.estimatedTime + "min" + "</p>" + "<p>" + "Priority: " + task.priorityRating + "</p>";
     tasklist.appendChild(item);
 
     // Extra Task DOM elements
@@ -637,11 +638,106 @@ function removeItemFromArray(arr, index) {
 // Function to hide the 'you haven't added any tasks' text
 function updateEmpty() {
     if (taskListArray.length > 0) {
-        document.getElementById('emptyList').style.display = 'none';
+        document.getElementById('emptyTaskList').style.display = 'none';
     } else {
-        document.getElementById('emptyList').style.display = 'block';
+        document.getElementById('emptyTaskList').style.display = 'block';
     }
 }
+},{}],"2REkG":[function(require,module,exports) {
+//Modify task list to suit acronym maker
+
+// Basic form DOM elements
+const form = document.getElementById("acronymform");
+const button = document.querySelector("#acronymform > button")
+
+// Selector for the acronym list output
+var acronymlist = document.querySelector("#acronymlist > ul");
+
+// DOM elements for the input fields
+var wordInput = document.getElementById("wordInput");
+var descInput = document.getElementById("descInput");
+
+// Form submission event listener
+form.addEventListener("submit", function(event) {
+    event.preventDefault();
+    let word = wordInput.value;
+    let desc = descInput.value;
+    if (acronym) {
+        addAcronym(word, desc);
+    }
+})
+
+// Create global array to track acronyms
+var acronymListArray = [];
+
+// Function to add acronym with user inputs as parameters
+function addAcronym(acronymWord, acronymDescription) {
+    let d = new Date();
+    let dateCreated = d.getFullYear();
+    let acronym = {
+        id: Date.now(),
+        acronymWord,
+        acronymDescription,
+        dateCreated
+    };
+    acronymListArray.push(acronym);
+    console.log(acronymListArray);
+    renderAcronym(acronym);
+}
+
+// Function to display acronym on screen
+function renderAcronym(acronym) {
+
+    // Call function - checks if a acronyms has been added
+    updateEmpty();
+
+    // Create HTML elements
+    let item = document.createElement("li");
+    item.setAttribute('data-id', acronym.id);
+    item.innerHTML = "<p>" + "<h2>" + acronym.acronymWord + "</h2>" + "</p>" + "<p>" + acronym.acronymDescription + "</p>";
+    acronymlist.appendChild(item);
+
+    // Extra acronyms DOM elements
+    let delButton = document.createElement("button");
+    let delButtonText = document.createTextNode("Delete Acronym");
+    delButton.appendChild(delButtonText);
+    item.appendChild(delButton);
+
+    // Event Listeners for DOM elements
+    delButton.addEventListener("click", function(event) {
+        event.preventDefault();
+        let id = event.target.parentElement.getAttribute('data-id');
+        let index = acronymListArray.findIndex(acronym => acronym.id === Number(id));
+        removeItemFromArray(acronymListArray, index)
+        console.log(acronymListArray);
+        updateEmpty();
+        item.remove();
+    })
+
+    form.reset();
+
+}
+
+// Function to remove item from array
+function removeItemFromArray(arr, index) {
+    if (index > -1) {
+        arr.splice(index, 1)
+    }
+    return arr;
+}
+
+
+// Function to hide the 'you haven't added any acronyms' text
+function updateEmpty() {
+    if (acronymListArray.length > 0) {
+        document.getElementById('emptyAcronymList').style.display = 'none';
+    } else {
+        document.getElementById('emptyAcronymList').style.display = 'block';
+    }
+}
+
+
+
 },{}]},["27Rzb","4OAbU"], "4OAbU", "parcelRequirefe09")
 
 //# sourceMappingURL=index.8a5bc16d.js.map

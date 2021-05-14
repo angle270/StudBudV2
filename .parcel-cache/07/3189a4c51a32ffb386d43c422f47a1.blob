@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>StudBud</title>
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app-container">
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href="#tasks" class="active">Tasks</a></li>
+			<li class="nav-item"><a href="#kanban">Kanban</a></li>
+			<li class="nav-item"><a href="#pomodoro">Pomodoro</a></li>
+			<li class="nav-item"><a href="#timer">Timer</a></li>
+			<li class="nav-item"><a href="#acronym">Acronym</a></li>
+		</ul>
+	</nav>
+
+	<div id="tasks" class="page-container">
+		<h1>Task List</h1>
+		<div id="task-grid">
+			<form id="taskform">
+				<label for="task">Task:</label>
+				<input type="text" name="task" id="taskInput" required="">
+
+				<!-- Date input -->
+				<label for="dueDate">Due Date: </label>
+				<input type="date" name="dueDate" id="dueDateInput">
+
+				<!-- Time input -->
+				<label for="completionTime">Completion Time: </label>
+				<input type="time" name="completionTime" id="completionTimeInput">
+
+				<label for="estimatedTime">Estimated completion time (in mins):</label>
+				<input type="number" name="estimatedTime" id="estimatedTimeInput">
+				<!-- Priority -->
+
+
+				<label for="priority">Task Priority:</label>
+				<select name="prority" id="priorityInput">
+					<option value="">Select one</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+
+				<br>
+
+				<button type="submit">Add to List</button>
+			</form>
+			<div id="tasklist">
+				<p id="emptyList">You have not added any tasks yet.</p>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="kanban" class="page-container">
+		<h1>Kanban Board</h1>
+	</div>
+
+	<div id="pomodoro" class="page-container">
+		<h1>Pomodoro</h1>
+	</div>
+
+	<div id="timer" class="page-container">
+		<h1>Timer</h1>
+	</div>
+
+	<div id="acronym" class="page-container">
+		<h1>Acronym Maker</h1>
+		<div id="acronym-grid">
+			<form id="acronym-form">
+				<!-- Word input -->
+				<label for="word">Word:</label>
+				<input type="text" name="word" id="wordInput" required="">
+
+				<!-- Description input -->
+				<label for="desc">Description:</label>
+				<textarea name="desc" id="descInput" cols="30" rows="10"></textarea>
+
+				<button type="submit">Add to List</button>
+			</form>
+		</div>
+
+	</div>
+
+
+	<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="80646b3516df9f3af9c6ebb00914a86d">
+	</script>
+</body>
+
+</html>

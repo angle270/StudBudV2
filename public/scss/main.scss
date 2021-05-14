@@ -1,5 +1,6 @@
 @import "typography";
-@import "navigation";
+@import "./components/navigation";
 @import "layout";
 @import "reset";
-@import "tasklist";
+@import "./components/tasklist";
+@import "./components/acronym"
