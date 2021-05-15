@@ -1,0 +1,25 @@
+//Define DOMS to hold time values
+let seconds = 0;
+let minutes = 0;
+let hours = 0;
+
+//Function to determine when to incriment time values
+function timer() {
+    seconds ++;
+
+    if(seconds / 60 === 1) {
+        seconds = 0;
+        minutes++;
+
+        if(minutes / 60 === 1) {
+            minutes = 0;
+            hours ++;
+        }
+    }
+
+    //Display updates time values
+    document.getElementById("display").innerHTML = hours + ":" + minutes + ":" + seconds;
+
+}
+
+window.setInterval(timer, 1000);
