@@ -5,26 +5,26 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>StudBud</title>
-	<link href="scss/main.scss" rel="stylesheet" type="text/css">
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
 </head>
 
 <body class="app-container">
-	<nav class = "top-nav">
-		<ul class = "nav-links">
-			<li class="nav-item"><a href ="#tasks" class = "active">Tasks</a></li>
-			<li class="nav-item"><a href ="#kanban">Kanban</a></li>
-			<li class="nav-item"><a href ="#pomodoro">Pomodoro</a></li>
-			<li class="nav-item"><a href ="#timer">Timer</a></li>
-			<li class="nav-item"><a href ="#acronym">Acronym</a></li>
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href="#tasks" class="active">Tasks</a></li>
+			<li class="nav-item"><a href="#kanban">Kanban</a></li>
+			<li class="nav-item"><a href="#pomodoro">Pomodoro</a></li>
+			<li class="nav-item"><a href="#timer">Timer</a></li>
+			<li class="nav-item"><a href="#acronym">Acronym</a></li>
 		</ul>
 	</nav>
 
-	<div id="tasks" class = "page-container">
+	<div id="tasks" class="page-container">
 		<h1>Task List</h1>
 		<div id="task-grid">
 			<form id="taskform">
 				<label for="task">Task:</label>
-				<input type="text" name="task" id="taskInput" required>
+				<input type="text" name="task" id="taskInput" required="">
 
 				<!-- Date input -->
 				<label for="dueDate">Due Date: </label>
@@ -58,34 +58,34 @@
 		</div>
 	</div>
 
-	<div id = "kanban" class= "page-container">
+	<div id="kanban" class="page-container">
 		<h1>Kanban Board</h1>
 	</div>
 
-	<div id = "pomodoro" class= "page-container">
+	<div id="pomodoro" class="page-container">
 		<h1>Pomodoro</h1>
 		<div id="pomodoro-container"></div>
 	</div>
 
-	<div id = "timer" class= "page-container">
+	<div id="timer" class="page-container">
 		<h1>Timer</h1>
-		<div id ="timer-container">
+		<div id="timer-container">
 			<h1 id="display">00:00:00</h1>
 		</div>
-		<div class = "timer-btns">
-			<button type = "button" id = "timer-start">Start</button>
-			<button type = "button" id = "timer-stop">Stop</button>
-			<button type = "button" id = "timer-reset">Reset</button>
+		<div class="timer-btns">
+			<button type="button" id="timer-start">Start</button>
+			<button type="button" id="timer-stop">Stop</button>
+			<button type="button" id="timer-reset">Reset</button>
 		</div>
 	</div>
 
-	<div id = "acronym" class= "page-container">
+	<div id="acronym" class="page-container">
 		<h1>Acronym Maker</h1>
-		<div id = "acronym-grid">
-			<form id = "acronymform">
+		<div id="acronym-grid">
+			<form id="acronymform">
 				<!-- Word input -->
 				<label for="word">Word:</label>
-				<input type="text" name="word" id="wordInput" required>
+				<input type="text" name="word" id="wordInput" required="">
 
 				<!-- Description input -->
 				<label for="desc">Description:</label>
@@ -101,7 +101,7 @@
 	</div>
 
 
-	<script src="script.js">
+	<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="fe529d90d4e5e0c856807bd4b7a684ad">
 	</script>
 </body>
 
