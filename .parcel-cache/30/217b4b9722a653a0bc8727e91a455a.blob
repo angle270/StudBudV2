@@ -1,0 +1,102 @@
+//Pomodoro timer that counts up instead of counting down
+
+
+//Define time values
+let seconds = 0;
+let minutes = 0;
+
+//Define display values
+let displaySeconds = 0;
+let displayMinutes = 0;
+
+//Define interval to hold the setInterval() function
+let interval = null;
+
+//Define status of pomodoro
+let status = "stopped";
+let sessionStatus = "work";
+
+//Define DOMS and process function when onclick is called
+document.getElementById("pomodoro-start").onclick = startPomodoro;
+document.getElementById("pomodoro-stop").onclick = stopPomodoro;
+document.getElementById("pomodoro-reset").onclick = resetPomodoro;
+
+//Function to determine when to incriment time values
+function pomodoro () {
+
+    //If minutes < 25, resets to 0 and counts up to 5min, resets and loops 4 times 
+
+    seconds ++;
+    if(seconds / 60 === 1) {
+        seconds = 0;
+        minutes ++;
+    }
+
+    for(i = 0; i < 2; i++) {
+
+        if(minutes / 10 === 1) {
+            seconds = 0;
+            minutes = 0;
+            sessionStatus = "short-break";
+        }
+        
+        if(sessionStatus === "short-break") {
+            if(minutes / 5 === 1) {
+                seconds = 0;
+                minutes = 0;
+                sessionStatus = "work";
+            }
+        }
+
+        if(i > 2) {
+            window.clearInterval(interval);
+            seconds = 0;
+            minutes = 0;
+            document.getElementById("pomodoro-display").innerHTML = "00:00";
+        }
+
+    }
+
+
+    //Concatonate display values to time values to show double-digits when under 10sec
+    if(seconds < 10) {
+        displaySeconds = "0" + seconds.toString();
+    } else {
+        displaySeconds = seconds;
+    }
+
+    if(minutes < 10) {
+        displayMinutes = "0" + minutes.toString();
+    } else {
+        displayMinutes = minutes;
+    }
+
+
+
+
+    document.getElementById("pomodoro-display").innerHTML = displayMinutes + ":" + displaySeconds;
+}
+
+//Functions to start, stop and reset pomodoro
+function startPomodoro() {
+    if(status === "stopped"){
+        interval = window.setInterval(pomodoro, 10);
+        status = "started";
+    }
+}
+
+function stopPomodoro() {
+    if(status === "started"){
+        window.clearInterval(interval);
+        status = "stopped";
+    }
+}
+
+function resetPomodoro() {
+    window.clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+
+    document.getElementById("pomodoro-display").innerHTML = "00:00";
+    status = "stopped";
+}

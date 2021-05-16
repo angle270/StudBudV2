@@ -5,6 +5,8 @@ import Navigation from './components/navigation';
 import './components/tasklist';
 import './components/acronym';
 import './components/timer';
+import './components/pomodoro';
+import './components/musicplayer';
 
 // DOM elements for links and pages
 const links = document.querySelectorAll('.top-nav > ul > li > a');

@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>StudBud</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
 	<link href="/index.0c72b7db.css" rel="stylesheet" type="text/css">
 </head>
 
@@ -64,13 +65,20 @@
 
 	<div id="pomodoro" class="page-container">
 		<h1>Pomodoro</h1>
-		<div id="pomodoro-container"></div>
+		<div id="pomodoro-container">
+			<h1 id="pomodoro-display">00:00</h1>
+		</div>
+		<div class="pomodoro-btns">
+			<button type="button" id="pomodoro-start">Start</button>
+			<button type="button" id="pomodoro-stop">Stop</button>
+			<button type="button" id="pomodoro-reset">Reset</button>
+		</div>
 	</div>
 
 	<div id="timer" class="page-container">
 		<h1>Timer</h1>
 		<div id="timer-container">
-			<h1 id="display">00:00:00</h1>
+			<h1 id="timer-display">00:00:00</h1>
 		</div>
 		<div class="timer-btns">
 			<button type="button" id="timer-start">Start</button>
@@ -100,8 +108,37 @@
 		</div>
 	</div>
 
+</body>
 
-	<script src="/index.8a5bc16d.js">// modules are defined as an array
+<footer>
+	<div class="music-container">
+	
+		<audio src="/Just_Awake.19996959.mp3" id="audio"></audio>
+	
+		<div class="music-nav">
+			<button id="prev" class="action-btn">
+				<i class="fas fa-backward"></i>
+			</button>
+			<button id="play" class="action-btn action-btn-big">
+				<i class="fas fa-play"></i>
+			</button>
+			<button id="next" class="action-btn">
+				<i class="fas fa-forward"></i>
+			</button>
+		</div>
+
+		<div class="music-info">
+			<h4 id="title">Testing Song</h4>
+			
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<script src="/index.8a5bc16d.js">// modules are defined as an array
 // [ module function, map of requires ]
 //
 // map of requires is short require name -> numeric require
@@ -243,12 +280,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"1t4QZ":[function(require,module,exports) {
+})({"76EOq":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "2622f58c418e992550e43e850d2d73f0";
+module.bundle.HMR_BUNDLE_ID = "2c33fc770534cede23d23aa0a8714ec5";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -544,11 +581,9 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"7rsQc":[function(require,module,exports) {
+},{}],"1geIu":[function(require,module,exports) {
 
-},{}]},["1t4QZ","7rsQc"], "7rsQc", "parcelRequirefe09")
+},{}]},["76EOq","1geIu"], "1geIu", "parcelRequirefe09")
 
 </script>
-</body>
-
 </html>

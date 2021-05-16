@@ -5,6 +5,7 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width">
 	<title>StudBud</title>
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
 	<link href="scss/main.scss" rel="stylesheet" type="text/css">
 </head>
 
@@ -64,13 +65,20 @@
 
 	<div id = "pomodoro" class= "page-container">
 		<h1>Pomodoro</h1>
-		<div id="pomodoro-container"></div>
+		<div id="pomodoro-container">
+			<h1 id="pomodoro-display">00:00</h1>
+		</div>
+		<div class = "pomodoro-btns">
+			<button type = "button" id = "pomodoro-start">Start</button>
+			<button type = "button" id = "pomodoro-stop">Stop</button>
+			<button type = "button" id = "pomodoro-reset">Reset</button>
+		</div>
 	</div>
 
 	<div id = "timer" class= "page-container">
 		<h1>Timer</h1>
 		<div id ="timer-container">
-			<h1 id="display">00:00:00</h1>
+			<h1 id="timer-display">00:00:00</h1>
 		</div>
 		<div class = "timer-btns">
 			<button type = "button" id = "timer-start">Start</button>
@@ -100,9 +108,36 @@
 		</div>
 	</div>
 
-
-	<script src="script.js">
-	</script>
 </body>
 
+<footer>
+	<div class="music-container">
+	
+		<audio src="./audio/Just_Awake.mp3" id = "audio"></audio>
+	
+		<div class="music-nav">
+			<button id="prev" class="action-btn">
+				<i class="fas fa-backward"></i>
+			</button>
+			<button id="play" class="action-btn action-btn-big">
+				<i class="fas fa-play"></i>
+			</button>
+			<button id="next" class="action-btn">
+				<i class="fas fa-forward"></i>
+			</button>
+		</div>
+
+		<div class="music-info">
+			<h4 id="title">Testing Song</h4>
+			
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<script src="script.js">
+</script>
 </html>

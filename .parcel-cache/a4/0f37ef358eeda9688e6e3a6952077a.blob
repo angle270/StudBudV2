@@ -1,0 +1,180 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat+Alternates&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap");
+html {
+  font-size: 100%;
+}
+/*16px*/
+body, p {
+  background: white;
+  font-family: "Nunito Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.75;
+  color: #000000;
+}
+p {
+  margin-bottom: 1rem;
+}
+h1, h2, h3, h4, h5 {
+  margin: 3rem 0 1.38rem;
+  font-family: "Montserrat Alternates", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+a {
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 400;
+  line-height: 1.3;
+}
+h1 {
+  margin-top: 0;
+  font-size: 1.802rem;
+}
+h2 {
+  font-size: 1.602rem;
+}
+h3 {
+  font-size: 1.424rem;
+}
+h4 {
+  font-size: 1.266rem;
+}
+h5 {
+  font-size: 1.125rem;
+}
+small, .text_small {
+  font-size: 0.889rem;
+}
+nav {
+  width: 120px;
+  height: 75vh;
+  flex-direction: row;
+  position: absolute;
+  top: 30px;
+  left: 10px;
+  display: flex;
+  border-radius: 40px;
+  justify-content: space-around;
+  align-items: center;
+  background-color: #d7dafa;
+}
+nav .nav-links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+nav .nav-links .nav-item a {
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  padding: 2em 0;
+}
+nav .nav-links .nav-item a:hover {
+  color: cadetblue;
+}
+nav .nav-links .nav-item a.active {
+  font-weight: bold;
+}
+.app-container {
+  padding-left: 120px;
+}
+.page-container {
+  margin: 4em;
+}
+.page-container#home {
+  text-align: center;
+}
+.page-container:not(#home) {
+  display: none;
+}
+/* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
+html {
+  box-sizing: border-box;
+  font-size: 16px;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: normal;
+}
+ol,
+ul {
+  list-style: none;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+#task-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "taskform tasklist";
+}
+#taskform {
+  grid-area: taskform;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#taskform label {
+  display: block;
+  width: 100%;
+}
+#tasklist {
+  grid-area: tasklist;
+}
+#tasklist ul {
+  list-style: none;
+}
+#acronym-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  grid-template-areas: "acronymform acronymlist";
+}
+#acronymform {
+  grid-area: acronymform;
+  max-width: 300px;
+  margin: 0 auto;
+}
+#acronymform label {
+  display: block;
+  width: 100%;
+}
+#acronymlist {
+  grid-area: acronymlist;
+}
+#acronymlist ul {
+  list-style: none;
+}
+footer {
+  position: absolute;
+  bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: crimson;
+}
+.music-container {
+  background-color: cornsilk;
+  border-radius: 20px;
+  display: flex;
+  padding: 20px 30px;
+  margin: 10px 0;
+}
+/*# sourceMappingURL=index.HASH_REF_80038805bd6829e42a01d0f20c72b7db.css.map */

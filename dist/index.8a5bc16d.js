@@ -448,6 +448,8 @@ var _componentsNavigationDefault = _parcelHelpers.interopDefault(_componentsNavi
 require('./components/tasklist');
 require('./components/acronym');
 require('./components/timer');
+require('./components/pomodoro');
+require('./components/musicplayer');
 // DOM elements for links and pages
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
@@ -461,7 +463,7 @@ nav.links.forEach(function (link) {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/acronym":"2REkG","./components/timer":"6s12x"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/acronym":"2REkG","./components/timer":"6s12x","./components/pomodoro":"2KGxt","./components/musicplayer":"6m8Cd"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 // Creating navigation class structure
@@ -649,7 +651,7 @@ function updateEmpty() {
 
 // Basic form DOM elements
 const form = document.getElementById("acronymform");
-const button = document.querySelector("#acronymform > button")
+const button = document.querySelector("#acronymform > button");
 
 // Selector for the acronym list output
 var acronymlist = document.querySelector("#acronymlist > ul");
@@ -769,7 +771,7 @@ function timer() {
 
     if(seconds / 60 === 1) {
         seconds = 0;
-        minutes++;
+        minutes ++;
 
         if(minutes / 60 === 1) {
             minutes = 0;
@@ -797,7 +799,7 @@ function timer() {
     }
 
     //Display updated time values
-    document.getElementById("display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
+    document.getElementById("timer-display").innerHTML = displayHours + ":" + displayMinutes + ":" + displaySeconds;
 }
 
 //Functions to start, stop and reset the timer
@@ -822,9 +824,121 @@ function resetTimer () {
     minutes = 0;
     hours = 0;
 
-    document.getElementById("display").innerHTML = "00:00:00";
+    document.getElementById("timer-display").innerHTML = "00:00:00";
     status = "stopped"
 }
+
+},{}],"2KGxt":[function(require,module,exports) {
+//Pomodoro timer that counts up instead of counting down
+
+
+//Define time values
+let seconds = 0;
+let minutes = 0;
+
+//Define display values
+let displaySeconds = 0;
+let displayMinutes = 0;
+
+//Define interval to hold the setInterval() function
+let interval = null;
+
+//Define status of pomodoro
+let status = "stopped";
+let sessionStatus = "work";
+
+//Define DOMS and process function when onclick is called
+document.getElementById("pomodoro-start").onclick = startPomodoro;
+document.getElementById("pomodoro-stop").onclick = stopPomodoro;
+document.getElementById("pomodoro-reset").onclick = resetPomodoro;
+
+//Function to determine when to incriment time values
+function pomodoro () {
+
+    //If minutes < 25, resets to 0 and counts up to 5min, resets and loops 4 times 
+    
+
+    for(i = 0; i < 2; i++) {
+
+        seconds +=0.5;
+
+        if(seconds / 60 === 1) {
+            seconds = 0;
+            minutes ++;
+        }   
+
+        if(minutes / 10 === 1) {
+            seconds = 0;
+            minutes = 0;
+            sessionStatus = "short-break";
+        }
+
+        if(sessionStatus === "short-break") {
+            if(minutes / 5 === 1) {
+                seconds = 0;
+                minutes = 0;
+                sessionStatus = "work";
+            }
+        }
+
+    }
+
+  
+
+
+    //Concatonate display values to time values to show double-digits when under 10sec
+    if(seconds < 10) {
+        displaySeconds = "0" + seconds.toString();
+    } else {
+        displaySeconds = seconds;
+    }
+
+    if(minutes < 10) {
+        displayMinutes = "0" + minutes.toString();
+    } else {
+        displayMinutes = minutes;
+    }
+
+
+
+
+    document.getElementById("pomodoro-display").innerHTML = displayMinutes + ":" + displaySeconds;
+}
+
+//Functions to start, stop and reset pomodoro
+function startPomodoro() {
+    if(status === "stopped"){
+        interval = window.setInterval(pomodoro, 10);
+        status = "started";
+    }
+}
+
+function stopPomodoro() {
+    if(status === "started"){
+        window.clearInterval(interval);
+        status = "stopped";
+    }
+}
+
+function resetPomodoro() {
+    window.clearInterval(interval);
+    seconds = 0;
+    minutes = 0;
+
+    document.getElementById("pomodoro-display").innerHTML = "00:00";
+    status = "stopped";
+}
+},{}],"6m8Cd":[function(require,module,exports) {
+//Define DOMS for music player items
+
+const musicContainer = document.querySelector('.music-container');
+const playBtn = document.querySelector('#play');
+const prevBtn = document.querySelector('#prev');
+const nextBtn = document.querySelector('.#next');
+const audio = document.querySelector('#audio');
+const progress = document.querySelector('.progress');
+const progressContainer = document.querySelector('.progress-container');
+const title = document.querySelector('#title');
 
 },{}]},["27Rzb","4OAbU"], "4OAbU", "parcelRequirefe09")
 

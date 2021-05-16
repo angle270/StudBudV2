@@ -1,0 +1,13 @@
+//Define time values
+let seconds = 0;
+let minutes = 0;
+
+//Define display values
+let displaySeconds = 0;
+let displayMinutes = 0;
+
+//Define interval to hold the setInterval() function
+let interval = null;
+
+//Define status of pomodoro
+let status = "stopped";
