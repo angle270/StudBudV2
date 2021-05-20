@@ -202,18 +202,11 @@ footer {
   padding: 3px;
 }
 .progress-container {
-  background: black;
+  background: white;
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
   height: 4px;
   width: 100%;
-}
-.progress {
-  background-color: white;
-  border-radius: 5px;
-  height: 100%;
-  width: 0%;
-  transition: width 0.1 linear;
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */
