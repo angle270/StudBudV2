@@ -65,13 +65,18 @@
 
 	<div id="pomodoro" class="page-container">
 		<h1>Pomodoro</h1>
-		<div id="pomodoro-container">
-			<h1 id="pomodoro-display">00:00</h1>
+		<div class="pomodoro-modes">
+			<button type="button" id="pomodoro-work" class="modeSelector__Button active" data-mode="work">Work</button>
+			<button type="button" id="pomodoro-short" class="modeSelector__Button" data-mode="short">Short Break</button>
+			<button type="button" id="pomodoro-long" class="modeSelector__Button" data-mode="long">Long Break</button>
 		</div>
-		<div class="pomodoro-btns">
-			<button type="button" id="pomodoro-start">Start</button>
-			<button type="button" id="pomodoro-stop">Stop</button>
-			<button type="button" id="pomodoro-reset">Reset</button>
+		<div id="pomodoro-container">
+			<h1 class="pomodoro-display" id="pomodoro-display" data-mode="work">25:00</h1>
+		</div>
+		<div class="pomodoro-controlBtn">
+			<button id="mainButton">
+				<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
+			</button>
 		</div>
 	</div>
 
@@ -280,12 +285,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"76EOq":[function(require,module,exports) {
+})({"6qsLQ":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "2c33fc770534cede23d23aa0a8714ec5";
+module.bundle.HMR_BUNDLE_ID = "c3b27d5f8307729eff8f64dffd9731f3";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -581,9 +586,9 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"1geIu":[function(require,module,exports) {
+},{}],"7w7Gq":[function(require,module,exports) {
 
-},{}]},["76EOq","1geIu"], "1geIu", "parcelRequirefe09")
+},{}]},["6qsLQ","7w7Gq"], "7w7Gq", "parcelRequirefe09")
 
 </script>
 </html>

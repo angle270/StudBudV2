@@ -1,0 +1,31 @@
+//Create constants
+const timer = document.getElementById("pomodoro-display");
+const modeButtons = document.querySelector("[class=pomodoro-modes]");
+const workButton = document.getElementById("pomodoro-work");
+const shortButton = document.getElementById("pomodoro-short");
+const longButton = document.getElementById("pomodoro-long");
+const timerButton = document.getElementById("toggle");
+
+//Initialise seconds
+let seconds = 0;
+
+//Create object for default values for pomodoro
+const TIMER = {
+    WORK: 25,
+    SHORTBREAK: 5,
+    LONGBREAK: 15,
+};
+
+//Functions
+function pomodoro () {
+    if(timerButton.classList.contains("fa-play")){
+        timerButton.classList.replace("fa-play", "fa-stop");
+        timerButton.dataset.paused = "false";
+    } else {
+        timerButton.classList.replace("fa-stop", "fa-play");
+        timerButton.dataset.paused = "true";
+    }
+}
+
+//Event listeners
+timerButton.addEventListener("click", pomodoro);

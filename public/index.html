@@ -65,13 +65,18 @@
 
 	<div id = "pomodoro" class= "page-container">
 		<h1>Pomodoro</h1>
-		<div id="pomodoro-container">
-			<h1 id="pomodoro-display">00:00</h1>
+		<div class="pomodoro-modes">
+			<button type = "button" id = "pomodoro-work" class = "modeSelector__Button active" data-mode="work">Work</button>
+			<button type = "button" id = "pomodoro-short" class = "modeSelector__Button" data-mode="short">Short Break</button>
+			<button type = "button" id = "pomodoro-long" class = "modeSelector__Button" data-mode="long">Long Break</button>
 		</div>
-		<div class = "pomodoro-btns">
-			<button type = "button" id = "pomodoro-start">Start</button>
-			<button type = "button" id = "pomodoro-stop">Stop</button>
-			<button type = "button" id = "pomodoro-reset">Reset</button>
+		<div id="pomodoro-container">
+			<h1 class = "pomodoro-display" id="pomodoro-display" data-mode = "work">25:00</h1>
+		</div>
+		<div class = "pomodoro-controlBtn">
+			<button id="mainButton">
+				<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
+			</button>
 		</div>
 	</div>
 

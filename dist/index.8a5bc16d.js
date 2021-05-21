@@ -829,105 +829,96 @@ function resetTimer () {
 }
 
 },{}],"2KGxt":[function(require,module,exports) {
-//Pomodoro timer that counts up instead of counting down
+//Create constants
+const timer = document.getElementById("pomodoro-display");
+const modeButtons = document.querySelector("[class=pomodoro-modes]");
+const workButton = document.getElementById("pomodoro-work");
+const shortButton = document.getElementById("pomodoro-short");
+const longButton = document.getElementById("pomodoro-long");
+const timerButton = document.getElementById("toggle");
 
-
-//Define time values
+//Initialise seconds
 let seconds = 0;
-let minutes = 0;
 
-//Define display values
-let displaySeconds = 0;
-let displayMinutes = 0;
+//Create object for default values for pomodoro
+const TIMER = {
+    WORK: 25,
+    SHORTBREAK: 5,
+    LONGBREAK: 15,
+};
 
-//Define interval to hold the setInterval() function
-let interval = null;
+//Function to change to different modes
+function changeMode(e) {
+    timerButton.classList.replace("fa-stop", "fa-play");
+    timerButton.dataset.paused = "true";
+  
+    //Add active class to current mode
+    for (let i = 0; i < 3; i++) {
+      e.path[1].children[i].classList.remove("active");
+    }
+    e.target.classList.add("active");
+  
+    let mode = e.target.dataset.mode;
+    timer.dataset.mode = mode;
 
-//Define status of pomodoro
-let status = "stopped";
-let sessionStatus = "work";
+    //Change starting timer values depending on which mode the user is in
+    if (timer.dataset.mode === "work") {
+      timer.innerHTML = `${TIMER.WORK}:00`;
+    } else if (timer.dataset.mode === "short") {
+      timer.innerHTML = `0${TIMER.SHORTBREAK}:00`;
+    } else {
+      timer.innerHTML = `${TIMER.LONGBREAK}:00`;
+    }
+  }
 
-//Define DOMS and process function when onclick is called
-document.getElementById("pomodoro-start").onclick = startPomodoro;
-document.getElementById("pomodoro-stop").onclick = stopPomodoro;
-document.getElementById("pomodoro-reset").onclick = resetPomodoro;
-
-//Function to determine when to incriment time values
+//Function to run pomodoro
 function pomodoro () {
 
-    //If minutes < 25, resets to 0 and counts up to 5min, resets and loops 4 times 
-    
-
-    for(i = 0; i < 2; i++) {
-
-        seconds +=0.5;
-
-        if(seconds / 60 === 1) {
-            seconds = 0;
-            minutes ++;
-        }   
-
-        if(minutes / 10 === 1) {
-            seconds = 0;
-            minutes = 0;
-            sessionStatus = "short-break";
+    //Toggle between different pomodoro modes & set duration
+    function setTimer() {
+        if(timer.dataset.mode === "work") {
+            seconds = TIMER.WORK * 60;
+        } else if (timer.dataset.mode === "short") {
+            seconds = TIMER.SHORTBREAK * 60;
+        } else {
+            seconds = TIMER.LONGBREAK * 60;
         }
+    }
 
-        if(sessionStatus === "short-break") {
-            if(minutes / 5 === 1) {
-                seconds = 0;
-                minutes = 0;
-                sessionStatus = "work";
+    //Change button icon when clicked
+    if(timerButton.classList.contains("fa-play")){
+        timerButton.classList.replace("fa-play", "fa-stop");
+        timerButton.dataset.paused = "false";
+
+        //Run timer
+        setTimer();
+
+        interval = setInterval(() => {
+            //Convert time remaining into minutes/seconds and add leading zeros
+            let timeRemaining = ("0" + Math.floor(seconds / 60)).slice(-2) + ":" + ("0" + (seconds % 60)).slice(-2);
+            timer.innerHTML = timeRemaining;
+
+            //Clear timer display if user stops the timer or if the timer reaches 0
+            if(timerButton.dataset.paused === "true" || seconds === 0) {
+                clearInterval(interval);
             }
-        }
 
-    }
+            //Timer counting down 1s
+            seconds--;
+        }, 1000);
 
-  
-
-
-    //Concatonate display values to time values to show double-digits when under 10sec
-    if(seconds < 10) {
-        displaySeconds = "0" + seconds.toString();
     } else {
-        displaySeconds = seconds;
-    }
-
-    if(minutes < 10) {
-        displayMinutes = "0" + minutes.toString();
-    } else {
-        displayMinutes = minutes;
-    }
-
-
-
-
-    document.getElementById("pomodoro-display").innerHTML = displayMinutes + ":" + displaySeconds;
-}
-
-//Functions to start, stop and reset pomodoro
-function startPomodoro() {
-    if(status === "stopped"){
-        interval = window.setInterval(pomodoro, 10);
-        status = "started";
+        timerButton.classList.replace("fa-stop", "fa-play");
+        timerButton.dataset.paused = "true";
     }
 }
 
-function stopPomodoro() {
-    if(status === "started"){
-        window.clearInterval(interval);
-        status = "stopped";
-    }
-}
+//Event listeners
+timerButton.addEventListener("click", pomodoro);
+modeButtons.addEventListener("click", changeMode);
 
-function resetPomodoro() {
-    window.clearInterval(interval);
-    seconds = 0;
-    minutes = 0;
 
-    document.getElementById("pomodoro-display").innerHTML = "00:00";
-    status = "stopped";
-}
+
 },{}],"6m8Cd":[function(require,module,exports) {
 //Define DOMS for music player items
 

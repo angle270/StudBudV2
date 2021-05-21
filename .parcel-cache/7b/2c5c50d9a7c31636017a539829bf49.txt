@@ -35,7 +35,7 @@
 80C:\Users\angel\Local Code\StudBudV2\node_modules\source-map\lib\binary-search.js132649338130000000 0
 48C:\Users\angel\Local Code\StudBudV2\package.json132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\fp\__.js132649338130000000 0
-40C:\Users\angel\Local Code\StudBudV2\dist132656217716978842 1
+40C:\Users\angel\Local Code\StudBudV2\dist132660389422995648 1
 75C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\pseudo132651852261977931 1
 105C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-minify-params\node_modules\postcss\lib\vendor.js132649338130000000 0
 46C:\Users\angel\Local Code\StudBudV2\.gitignore132651855244555374 0
@@ -145,7 +145,7 @@
 113C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-discard-comments\node_modules\postcss\lib\lazy-result.js132649338130000000 0
 51C:\Users\angel\Local Code\StudBudV2\node_modules\ws132651854714530151 1
 117C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-normalize-positions\node_modules\supports-color\package.json132649338130000000 0
-53C:\Users\angel\Local Code\StudBudV2\public\index.html132656212271692387 0
+53C:\Users\angel\Local Code\StudBudV2\public\index.html132660385545660917 0
 109C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-modules-values\node_modules\postcss\lib\container.js132649338130000000 0
 69C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\es\README.md132649338130000000 0
 95C:\Users\angel\Local Code\StudBudV2\node_modules\@babel\plugin-syntax-numeric-separator\LICENSE132649338130000000 0
@@ -323,7 +323,7 @@
 77C:\Users\angel\Local Code\StudBudV2\node_modules\fastest-levenshtein\index.js132649338130000000 0
 66C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\_parent.js132649338130000000 0
 72C:\Users\angel\Local Code\StudBudV2\node_modules\@types\node\events.d.ts132649338130000000 0
-65C:\Users\angel\Local Code\StudBudV2\public\components\pomodoro.js132655380122076384 0
+65C:\Users\angel\Local Code\StudBudV2\public\components\pomodoro.js132660389422068138 0
 103C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-ordered-values\node_modules\chalk\templates.js132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\domain-browser132651852423317816 1
 68C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\toPairsIn.js132649338130000000 0
@@ -13947,7 +13947,7 @@
 67C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.eslintrc132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.nycrc132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\CHANGELOG.md132649338130000000 0
-62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132656217716978842 0
+62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132660389422995648 0
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\index.js132649338130000000 0
 84C:\Users\angel\Local Code\StudBudV2\node_modules\caniuse-lite\data\features\proxy.js132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\node\HexColor.js132649338130000000 0
@@ -14145,7 +14145,7 @@
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\LICENSE132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\highlight.js\scss\androidstudio.scss132649338130000000 0
 71C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\package.json132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132656217716978842 0
+63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132660389422985667 0
 73C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\test\.eslintrc132649338130000000 0
 83C:\Users\angel\Local Code\StudBudV2\node_modules\cssnano-util-raw-cache\LICENSE-MIT132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\caller-path\readme.md132649338130000000 0
@@ -21148,9 +21148,9 @@
 59C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.cmd132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.ps1132649338130000000 0
-59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132656217716978842 0
-58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132656217716978842 0
-51C:\Users\angel\Local Code\StudBudV2\dist\index.html132656217716978842 0
+59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132660389422955742 0
+58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132660389422955742 0
+51C:\Users\angel\Local Code\StudBudV2\dist\index.html132660389422955742 0
 64C:\Users\angel\Local Code\StudBudV2\dist\Just_Awake.19996959.mp3132656199375991514 0
 56C:\Users\angel\Local Code\StudBudV2\audio\Just_Awake.mp3132656135943454451 0
 56C:\Users\angel\Local Code\StudBudV2\audio\late_night.mp3132656138558688079 0
