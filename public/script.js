@@ -7,7 +7,7 @@ import './components/acronym';
 import './components/timer';
 import './components/pomodoro';
 import './components/musicplayer';
-
+import './components/kanban';
 // DOM elements for links and pages
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');

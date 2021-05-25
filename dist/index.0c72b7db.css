@@ -5,8 +5,7 @@ html {
   font-size: 100%;
 }
 /*16px*/
-body, p {
-  background: white;
+body, p, input, button {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
   line-height: 1.75;
@@ -208,5 +207,67 @@ footer {
   margin: 10px 0;
   height: 4px;
   width: 100%;
+}
+#kanban-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "kanban-board-list kanban-board";
+}
+#kanban-board-list {
+  grid-area: kanban-board-list;
+  max-width: 300px;
+  margin: 0 auto;
+}
+.board-list {
+  line-height: 1.7;
+}
+#kanban button {
+  cursor: pointer;
+  background: 0;
+  border: 0;
+  padding: 0;
+}
+.btn-board, .btn-task {
+  font-size: 1.2em;
+  font-weight: 800;
+  margin-left: 10px;
+  transition: opacity 200ms ease-in;
+}
+.new-board, .new-task {
+  background: transparent;
+  border: 0;
+  border-bottom: 1px solid black;
+  font-size: inherit;
+  outline: none;
+  transition: border-bottom 150ms ease-in;
+}
+.active-board {
+  font-weight: 700;
+}
+#kanban-board {
+  --spacer: 2em;
+  grid-area: kanban-board;
+  background: #e4e4e4;
+}
+.board-header {
+  padding: 0 var(--spacer);
+  background: white;
+}
+.list-title {
+  margin: 0;
+}
+.kanban-body {
+  padding: 0 var(--spacer);
+}
+.new-board:focus, .new-task:focus {
+  border-bottom-width: 2px;
+}
+.new-board:focus::placeholder, .new-task:focus::placeholder {
+  opacity: 0.2;
+}
+.btn-board:hover, .btn-task:hover {
+  opacity: 0.5;
 }
 /*# sourceMappingURL=index.0c72b7db.css.map */

@@ -450,6 +450,7 @@ require('./components/acronym');
 require('./components/timer');
 require('./components/pomodoro');
 require('./components/musicplayer');
+require('./components/kanban');
 // DOM elements for links and pages
 const links = document.querySelectorAll('.top-nav > ul > li > a');
 const pages = document.querySelectorAll('.page-container');
@@ -463,7 +464,7 @@ nav.links.forEach(function (link) {
   });
 });
 
-},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/acronym":"2REkG","./components/timer":"6s12x","./components/pomodoro":"2KGxt","./components/musicplayer":"6m8Cd"}],"2K1cj":[function(require,module,exports) {
+},{"./components/navigation":"2K1cj","@parcel/transformer-js/lib/esmodule-helpers.js":"5gA8y","./components/tasklist":"Rj9Cl","./components/acronym":"2REkG","./components/timer":"6s12x","./components/pomodoro":"2KGxt","./components/musicplayer":"6m8Cd","./components/kanban":"3ezuS"}],"2K1cj":[function(require,module,exports) {
 var _parcelHelpers = require("@parcel/transformer-js/lib/esmodule-helpers.js");
 _parcelHelpers.defineInteropFlag(exports);
 // Creating navigation class structure
@@ -628,6 +629,7 @@ function renderTask(task) {
     // Clear the input form
     form.reset();
 }
+
 
 // Function to remove item from array
 function removeItemFromArray(arr, index) {
@@ -1001,6 +1003,8 @@ playBtn.addEventListener('click', () => {
 prevBtn.addEventListener('click', prevSong);
 nextBtn.addEventListener('click', nextSong);
 
+
+},{}],"3ezuS":[function(require,module,exports) {
 
 },{}]},["27Rzb","4OAbU"], "4OAbU", "parcelRequirefe09")
 

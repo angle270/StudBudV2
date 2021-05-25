@@ -61,18 +61,86 @@
 
 	<div id = "kanban" class= "page-container">
 		<h1>Kanban Board</h1>
+
+		<div id = "kanban-grid">
+			<!-- List of accessible boards -->
+			<div id ="kanban-board-list">
+				<h3 class="board-title">My Boards</h3>
+				<ul class="board-list">
+					<li class = "active-board">To Do</li>
+					<li>To Review</li>
+					<li>Catch Up</li>
+				</ul>
+
+				<form action="">
+					<input type="text" class = "new-board" placeholder="New Board Name" aria-label="new board name"/>
+					<button class = "btn-board" aria-label="create new board">+</button>
+				</form>
+			</div>
+
+			<!-- Boards -->
+			<div id ="kanban-board">
+				<div class="board-header">
+					<h3 class="list-title">To Do</h3>
+				</div>
+
+				<!-- Main content of boards -->
+				<div class="kanban-body">
+					<!-- Task list -->
+					<div class="kanban-tasks">
+
+						<!-- Task 1 -->
+						<div class="k-task">
+							<input type="checkbox" id="task-1"/>
+							<label for="task-1">Japanese homework</label>
+						</div>
+
+						<!-- Task 2 -->
+						<div class="k-task">
+							<input type="checkbox" id="task-2"/>
+							<label for="task-2">Speaking review</label>
+						</div>
+
+						<!-- Task 3 -->
+						<div class="k-task">
+							<input type="checkbox" id="task-3"/>
+							<label for="task-3">Read chapter 2-3</label>
+						</div>
+					</div>
+
+					<!-- Buton to create new taskk inside board -->
+					<div class="new-task-creator">
+						<form action="">
+							<input type="text" class = "new-task" placeholder="New Task Name" aria-label="new task name"/>
+							<button class = "btn-task" aria-label="create new task">+</button>
+						</form>
+					</div>
+
+					<div class="delete-tasks">
+						<button class="btn-delete">Clear completed tasks</button>
+						<button class="btn-delete">Delete list</button>
+					</div>
+				</div>
+			</div>
+		</div>
 	</div>
 
 	<div id = "pomodoro" class= "page-container">
 		<h1>Pomodoro</h1>
+
+		<!-- Pomodoro button modes -->
 		<div class="pomodoro-modes">
 			<button type = "button" id = "pomodoro-work" class = "modeSelector__Button active" data-mode="work">Work</button>
 			<button type = "button" id = "pomodoro-short" class = "modeSelector__Button" data-mode="short">Short Break</button>
 			<button type = "button" id = "pomodoro-long" class = "modeSelector__Button" data-mode="long">Long Break</button>
 		</div>
+
+		<!-- Pomodoro timer display -->
 		<div id="pomodoro-container">
 			<h1 class = "pomodoro-display" id="pomodoro-display" data-mode = "work">25:00</h1>
 		</div>
+
+		<!-- Start/pause pomodoro buttons -->
 		<div class = "pomodoro-controlBtn">
 			<button id="mainButton">
 				<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
@@ -82,9 +150,13 @@
 
 	<div id = "timer" class= "page-container">
 		<h1>Timer</h1>
+
+		<!-- Timer display -->
 		<div id ="timer-container">
 			<h1 id="timer-display">00:00:00</h1>
 		</div>
+
+		<!-- Timer buttons -->
 		<div class = "timer-btns">
 			<button type = "button" id = "timer-start">Start</button>
 			<button type = "button" id = "timer-stop">Stop</button>
