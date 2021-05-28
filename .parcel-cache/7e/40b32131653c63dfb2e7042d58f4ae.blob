@@ -1,0 +1,116 @@
+//Create constants
+const listsContainer = document.querySelector('[data-lists]');
+const newBoardForm = document.querySelector('[data-board-form]');
+const newBoardInput = document.querySelector('[data-board-input]');
+const deleteBoardButton = document.getElementById('del-list');
+const boardDisplayContainer = document.getElementById('kanban-board');
+const boardTitleElement= document.querySelector('.list-title');
+const tasksContainer = document.querySelector('.kanban-tasks');
+const taskTemplate = document.getElementById('kanban-task-template');
+
+const LOCAL_STORAGE_BOARD_KEY = 'board.lists';
+const LOCAL_STORAGE_SELECTED_BOARD_ID_KEY = 'board.selectedBoardId';
+
+//Storing board list propertes
+let list = JSON.parse(localStorage.getItem(LOCAL_STORAGE_BOARD_KEY)) || [];
+let selectedBoardId = localStorage.getItem(LOCAL_STORAGE_SELECTED_BOARD_ID_KEY);
+
+//Determine which board list is selected and active
+listsContainer.addEventListener('click', e => {
+    if (e.target.tagName.toLowerCase() === 'li') {
+        selectedBoardId = e.target.dataset.listId;
+        saveAndRender();
+    }
+})
+
+//Delete board lists
+deleteBoardButton.addEventListener('click', e => {
+    list = list.filter(board => board.id !== selectedBoardId);
+    selectedBoardId = null;
+    saveAndRender();
+})
+
+
+//Event listener to input and populate board names
+newBoardForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const boardName = newBoardInput.value;
+    if (boardName == null || boardName === '') return;
+    const board = createBoard(boardName);
+    newBoardInput.value = null;
+    list.push(board);
+    saveAndRender();
+})
+
+function createBoard(name) {
+    return { id: Date.now().toString(), name: name, tasks: [{
+        id: 'asdhsakjd',
+        name: 'test',
+        complete: false
+    }] };
+}
+
+//Call save and render function
+function saveAndRender() {
+    save();
+    render();
+}
+
+
+//Save lists to local storage
+function save () {
+    localStorage.setItem(LOCAL_STORAGE_BOARD_KEY, JSON.stringify(list));
+    localStorage.setItem(LOCAL_STORAGE_SELECTED_BOARD_ID_KEY, selectedBoardId);
+}
+
+//Input and render board list properties to web app
+function render() {
+    clearElement(listsContainer);
+    renderBoardList();
+
+    const selectedBoard = list.find(board => board.id === selectedBoardId);
+    if (selectedBoardId == null) {
+        boardDisplayContainer.style.display = 'none';
+    } else {
+        boardDisplayContainer.style.display = '';
+        boardTitleElement.innerText = selectedBoard.name;
+        clearElement(tasksContainer);
+        renderBoardTasks(selectedBoard);
+    }
+}
+
+function renderBoardTasks(selectedBoard) {
+    selectedBoard.tasks.forEach(task => {
+        const taskElement = document.importNode(taskTemplate.content, true);
+        const checkbox = taskElement.querySelector('input');
+        checkbox.id = task.id;
+        checkbox.checked = task.complete;
+        const label = taskElement.querySelector('label');
+        label.htmlfor = task.id;
+        label.append(task.name);
+        tasksContainer.appendChild(taskElement);
+    
+    })
+}
+
+function renderBoardList() {
+    list.forEach(list => {
+        const listElement = document.createElement('li');
+        listElement.dataset.listId = list.id;
+        listElement.classList.add("list-name");
+        listElement.innerText = list.name;
+        if (list.id === selectedBoardId) {
+            listElement.classList.add('active-board');
+        }
+        listsContainer.appendChild(listElement);
+    })
+}
+
+function clearElement(element) {
+    while(element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+
+}
+
+render()

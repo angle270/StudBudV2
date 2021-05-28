@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>StudBud</title>
+	<link rel="stylesheet" href="4c97b496a5bf977dfd686f645be3b650">
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app-container">
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href="#tasks" class="active">Tasks</a></li>
+			<li class="nav-item"><a href="#kanban">Kanban</a></li>
+			<li class="nav-item"><a href="#pomodoro">Pomodoro</a></li>
+			<li class="nav-item"><a href="#timer">Timer</a></li>
+			<li class="nav-item"><a href="#acronym">Acronym</a></li>
+		</ul>
+	</nav>
+
+	<div id="tasks" class="page-container">
+		<h1>Task List</h1>
+		<div id="task-grid">
+			<form id="taskform">
+				<label for="task">Task:</label>
+				<input type="text" name="task" id="taskInput" required="">
+
+				<!-- Date input -->
+				<label for="dueDate">Due Date: </label>
+				<input type="date" name="dueDate" id="dueDateInput">
+
+				<!-- Time input -->
+				<label for="completionTime">Completion Time: </label>
+				<input type="time" name="completionTime" id="completionTimeInput">
+
+				<label for="estimatedTime">Estimated completion time (in mins):</label>
+				<input type="number" name="estimatedTime" id="estimatedTimeInput">
+				<!-- Priority -->
+
+
+				<label for="priority">Task Priority:</label>
+				<select name="prority" id="priorityInput">
+					<option value="">Select one</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+
+				<br>
+
+				<button type="submit">Add Task</button>
+			</form>
+			<div id="tasklist">
+				<p id="emptyTaskList">You have not added any tasks yet.</p>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="kanban" class="page-container">
+		<h1>Kanban Board</h1>
+
+		<div id="kanban-grid">
+			<!-- List of accessible boards -->
+			<div id="kanban-board-list">
+				<h3 class="board-title">My Boards</h3>
+				<ul class="board-list" data-lists="">
+					<!-- <li class = "list-name active-board">To Do</li>
+					<li class = "list-name">To Review</li>
+					<li class = "list-name">Catch Up</li> -->
+				</ul>
+
+				<form action="" data-board-form="">
+					<input type="text" class="new-board" data-board-input="" placeholder="New Board Name" aria-label="new board name">
+					<button class="btn-board" aria-label="create new board">+</button>
+				</form>
+			</div>
+
+			<!-- Boards -->
+			<div id="kanban-board">
+				<div class="board-header">
+					<h3 class="list-title">To Do</h3>
+				</div>
+
+				<!-- Main content of boards -->
+				<div class="kanban-body">
+					<!-- Task list -->
+					
+
+					<!-- Buton to create new taskk inside board -->
+					<div class="new-task-creator">
+						<form action="">
+							<input type="text" class="new-task" placeholder="New Task Name" aria-label="new task name">
+							<button class="btn-task" aria-label="create new task">+</button>
+						</form>
+					</div>
+
+					<div class="delete-tasks">
+						<button class="btn-delete" id="clear-tasks">Clear completed tasks</button>
+						<button class="btn-delete" id="del-list">Delete list</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="pomodoro" class="page-container">
+		<h1>Pomodoro</h1>
+
+		<!-- Pomodoro button modes -->
+		<div class="pomodoro-modes">
+			<button type="button" id="pomodoro-work" class="modeSelector__Button active" data-mode="work">Work</button>
+			<button type="button" id="pomodoro-short" class="modeSelector__Button" data-mode="short">Short Break</button>
+			<button type="button" id="pomodoro-long" class="modeSelector__Button" data-mode="long">Long Break</button>
+		</div>
+
+		<!-- Pomodoro timer display -->
+		<div id="pomodoro-container">
+			<h1 class="pomodoro-display" id="pomodoro-display" data-mode="work">25:00</h1>
+		</div>
+
+		<!-- Start/pause pomodoro buttons -->
+		<div class="pomodoro-controlBtn">
+			<button id="mainButton">
+				<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
+			</button>
+		</div>
+	</div>
+
+	<div id="timer" class="page-container">
+		<h1>Timer</h1>
+
+		<!-- Timer display -->
+		<div id="timer-container">
+			<h1 id="timer-display">00:00:00</h1>
+		</div>
+
+		<!-- Timer buttons -->
+		<div class="timer-btns">
+			<button type="button" id="timer-start">Start</button>
+			<button type="button" id="timer-stop">Stop</button>
+			<button type="button" id="timer-reset">Reset</button>
+		</div>
+	</div>
+
+	<div id="acronym" class="page-container">
+		<h1>Acronym Maker</h1>
+		<div id="acronym-grid">
+			<form id="acronymform">
+				<!-- Word input -->
+				<label for="word">Word:</label>
+				<input type="text" name="word" id="wordInput" required="">
+
+				<!-- Description input -->
+				<label for="desc">Description:</label>
+				<textarea name="desc" id="descInput" cols="30" rows="10"></textarea>
+
+				<button type="submit">Add Acronym</button>
+			</form>
+			<div id="acronymlist">
+				<p id="emptyAcronymList">You have not added any acronyms yet.</p>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+	<template id="kanban-task-template">
+		<div class="kanban-tasks">
+			<div class="kanban-task">
+				<input type="checkbox">
+				<label></label>
+			</div>
+		</div>
+	</template>
+</body>
+
+<footer>
+	<div class="music-container">
+	
+		<audio src="00aee38c9e91b3bb99fd64d5064474c6" id="audio"></audio>
+	
+		<div class="music-nav">
+			<button id="prev" class="action-btn">
+				<i class="fas fa-backward"></i>
+			</button>
+			<button id="play" class="action-btn action-btn-big">
+				<i class="fas fa-play"></i>
+			</button>
+			<button id="next" class="action-btn">
+				<i class="fas fa-forward"></i>
+			</button>
+		</div>
+
+		<div class="music-info">
+			<h4 id="title">Testing Song</h4>
+			
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="4c7fb5310ef8c20d553839d3be196beb">
+</script>
+</html>

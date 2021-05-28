@@ -1,0 +1,25 @@
+const listsContainer = document.querySelector('[data-lists]')
+
+let list = [{
+    id: 1,
+    name: 'todo'
+}];
+
+function render() {
+    clearElement(listsContainer);
+    list.forEach(list => {
+        const listElement = document.createElement('li');
+        listElement.classList.add("list-name");
+        listElement.innerText = list.name;
+        listsContainer.appendChild(listElement);
+    })
+}
+
+function clearElement(element) {
+    while(element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+
+}
+
+render()

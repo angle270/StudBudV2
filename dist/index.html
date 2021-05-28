@@ -60,69 +60,28 @@
 	</div>
 
 	<div id="kanban" class="page-container">
-		<h1>Kanban Board</h1>
 
-		<div id="kanban-grid">
-			<!-- List of accessible boards -->
-			<div id="kanban-board-list">
-				<h3 class="board-title">My Boards</h3>
-				<ul class="board-list">
-					<li class="active-board">To Do</li>
-					<li>To Review</li>
-					<li>Catch Up</li>
-				</ul>
-
-				<form action="">
-					<input type="text" class="new-board" placeholder="New Board Name" aria-label="new board name">
-					<button class="btn-board" aria-label="create new board">+</button>
-				</form>
+		<div class="kanban-container">
+				
+			<div class="no-status">
+				<h3>No Status</h3>
+				<button id="add-task">+ Add Task</button>
 			</div>
 
-			<!-- Boards -->
-			<div id="kanban-board">
-				<div class="board-header">
-					<h3 class="list-title">To Do</h3>
-				</div>
+			<div class="not-started">
+				<h3>Not Started</h3>
+			</div>
 
-				<!-- Main content of boards -->
-				<div class="kanban-body">
-					<!-- Task list -->
-					<div class="kanban-tasks">
+			<div class="in-progress">
+				<h3>In Progress</h3>
+			</div>
 
-						<!-- Task 1 -->
-						<div class="k-task">
-							<input type="checkbox" id="task-1">
-							<label for="task-1">Japanese homework</label>
-						</div>
-
-						<!-- Task 2 -->
-						<div class="k-task">
-							<input type="checkbox" id="task-2">
-							<label for="task-2">Speaking review</label>
-						</div>
-
-						<!-- Task 3 -->
-						<div class="k-task">
-							<input type="checkbox" id="task-3">
-							<label for="task-3">Read chapter 2-3</label>
-						</div>
-					</div>
-
-					<!-- Buton to create new taskk inside board -->
-					<div class="new-task-creator">
-						<form action="">
-							<input type="text" class="new-task" placeholder="New Task Name" aria-label="new task name">
-							<button class="btn-task" aria-label="create new task">+</button>
-						</form>
-					</div>
-
-					<div class="delete-tasks">
-						<button class="btn-delete">Clear completed tasks</button>
-						<button class="btn-delete">Delete list</button>
-					</div>
-				</div>
+			<div class="completed">
+				<h3>Completed</h3>
 			</div>
 		</div>
+
+		
 	</div>
 
 	<div id="pomodoro" class="page-container">
@@ -357,12 +316,12 @@
       this[globalName] = mainExports;
     }
   }
-})({"5WdKg":[function(require,module,exports) {
+})({"VK5zL":[function(require,module,exports) {
 var HMR_HOST = null;
 var HMR_PORT = 1234;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "d751713988987e9331980363e24189ce";
-module.bundle.HMR_BUNDLE_ID = "12bc552e2c069314837485ed344c95ec";
+module.bundle.HMR_BUNDLE_ID = "ca14d75dd2f90514cde2aa8b1582e727";
 // @flow
 /*global HMR_HOST, HMR_PORT, HMR_ENV_HASH, HMR_SECURE*/
 /*::
@@ -658,9 +617,9 @@ id) /*: string*/
   acceptedAssets[id] = true;
 }
 
-},{}],"5LHh3":[function(require,module,exports) {
+},{}],"6jdXQ":[function(require,module,exports) {
 
-},{}]},["5WdKg","5LHh3"], "5LHh3", "parcelRequirefe09")
+},{}]},["VK5zL","6jdXQ"], "6jdXQ", "parcelRequirefe09")
 
 </script>
 </html>

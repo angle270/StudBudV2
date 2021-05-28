@@ -208,65 +208,43 @@ footer {
   height: 4px;
   width: 100%;
 }
-#kanban-grid {
+.kanban-container {
+  height: 80vh;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 0.1fr 1fr 1fr 1fr 1fr 0.1fr;
   grid-template-rows: 1fr;
-  gap: 0px 0px;
-  grid-template-areas: "kanban-board-list kanban-board";
+  gap: 0px 5px;
+  grid-template-areas: ". no-status not-started in-progress completed .";
 }
-#kanban-board-list {
-  grid-area: kanban-board-list;
-  max-width: 300px;
-  margin: 0 auto;
-}
-.board-list {
-  line-height: 1.7;
-}
-#kanban button {
-  cursor: pointer;
-  background: 0;
-  border: 0;
-  padding: 0;
-}
-.btn-board, .btn-task {
-  font-size: 1.2em;
-  font-weight: 800;
-  margin-left: 10px;
-  transition: opacity 200ms ease-in;
-}
-.new-board, .new-task {
-  background: transparent;
-  border: 0;
-  border-bottom: 1px solid black;
-  font-size: inherit;
-  outline: none;
-  transition: border-bottom 150ms ease-in;
-}
-.active-board {
+.kanban-container h3 {
+  position: relative;
+  top: 10px;
   font-weight: 700;
+  display: flex;
+  justify-content: space-around;
+  background-color: whitesmoke;
+  padding: 5px;
+  border-radius: 7px;
 }
-#kanban-board {
-  --spacer: 2em;
-  grid-area: kanban-board;
-  background: #e4e4e4;
+.no-status {
+  grid-area: no-status;
 }
-.board-header {
-  padding: 0 var(--spacer);
-  background: white;
+.not-started {
+  grid-area: not-started;
 }
-.list-title {
-  margin: 0;
+.in-progress {
+  grid-area: in-progress;
 }
-.kanban-body {
-  padding: 0 var(--spacer);
+.completed {
+  grid-area: completed;
 }
-.new-board:focus, .new-task:focus {
-  border-bottom-width: 2px;
-}
-.new-board:focus::placeholder, .new-task:focus::placeholder {
-  opacity: 0.2;
-}
-.btn-board:hover, .btn-task:hover {
-  opacity: 0.5;
+#add-task {
+  padding: 0.5rem 1rem;
+  background-color: whitesmoke;
+  outline: none;
+  border: none;
+  width: 100%;
+  margin: 0.5rem 0;
+  border-radius: 5px;
+  cursor: pointer;
 }

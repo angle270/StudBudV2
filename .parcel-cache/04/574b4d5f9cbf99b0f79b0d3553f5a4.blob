@@ -1,0 +1,41 @@
+//Create constants
+const listsContainer = document.querySelector('[data-lists]')
+const newBoardForm = document.querySelector('[data-new-board-form]')
+const newBoardInput = document.querySelector('[data-new-board-input]')
+
+//Array storing board list propertes
+let boardList = [{
+    id: 1,
+    name: 'todo'
+}];
+
+//Event listener to input and populate board names
+newBoardForm.addEventListener('submit', e => {
+    e.preventDefault();
+    const boardName = newBoardInput.value;
+    if (boardName == null || boardName === '') return;
+    const board = createBoard(boardName);
+})
+
+
+
+//Input and render board list properties to web app
+function render() {
+    clearElement(listsContainer);
+    boardList.forEach(boardList => {
+        const listElement = document.createElement('li');
+        listElement.dataset.boardListId = boardList.id;
+        listElement.classList.add("list-name");
+        listElement.innerText = boardList.name;
+        listsContainer.appendChild(listElement);
+    })
+}
+
+function clearElement(element) {
+    while(element.firstChild) {
+        element.removeChild(element.firstChild);
+    }
+
+}
+
+render()
