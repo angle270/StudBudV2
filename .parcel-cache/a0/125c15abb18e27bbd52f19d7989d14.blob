@@ -1,0 +1,36 @@
+//Create consts
+const kanbanTasks = document.querySelectorAll('.todo');
+const allStatus = document.querySelectorAll('.status');
+
+
+kanbanTasks.forEach(todo => {
+    todo.addEventListener("dragstart", dragStart);
+    todo.addEventListener("dragend", dragEnd);
+})
+
+function dragStart() {
+
+}
+
+function dragEnd() {
+    
+}
+
+allStatus.forEach (status => {
+    status.addEventListener("dragover", dragOver);
+    status.addEventListener("dragenter", dragEnter);
+    status.addEventListener("dragleave", dragLeave);
+})
+
+function dragEnd() {
+    
+}
+
+function draEnter() {
+    
+}
+
+function dragLeave() {
+    
+}
+

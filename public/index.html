@@ -62,48 +62,68 @@
 	<div id = "kanban" class= "page-container">
 
 		<div class="kanban-container">
-				
-			<div class="no-status">
-				<h3>No Status</h3>
-				<button id="add-task">+ Add Task</button>
+
+			<!-- Task Adder -->
+			<div class="modal" id="todo_form">
+
+				<div class="header">
+				  <div class="title">Add Task</div>
+				</div>
+
+				<div class="body">
+				  <input type="text" id="todo-input" />
+				  <input type="submit" value="+" id="todo-submit" />
+				</div>
+
 			</div>
 
-			<div class="not-started">
-				<h3>Not Started</h3>
+			
+			<!-- To do lists -->
+			<div class="status" id="no_status">
+			  <h1>No Status</h1>
+
+			  <div class="todo" draggable="true">
+			  </div>
+			  
 			</div>
 
-			<div class="in-progress">
-				<h3>In Progress</h3>
+			<div class="status">
+			  <h1>Not Started</h1>
 			</div>
 
-			<div class="completed">
-				<h3>Completed</h3>
+			<div class="status">
+			  <h1>In Progress</h1>
 			</div>
-		</div>
 
-		
+			<div class="status">
+			  <h1>Completed</h1>
+			</div>
+
+		  </div>
 	</div>
 
 	<div id = "pomodoro" class= "page-container">
 		<h1>Pomodoro</h1>
 
-		<!-- Pomodoro button modes -->
-		<div class="pomodoro-modes">
-			<button type = "button" id = "pomodoro-work" class = "modeSelector__Button active" data-mode="work">Work</button>
-			<button type = "button" id = "pomodoro-short" class = "modeSelector__Button" data-mode="short">Short Break</button>
-			<button type = "button" id = "pomodoro-long" class = "modeSelector__Button" data-mode="long">Long Break</button>
-		</div>
+		<div class="pomodoro-div">
+			<!-- Pomodoro button modes -->
+			<div class="pomodoro-modes">
+				<button type = "button" id = "pomodoro-work" class = "modeSelector__Button active" data-mode="work">Work</button>
+				<button type = "button" id = "pomodoro-short" class = "modeSelector__Button" data-mode="short">Short Break</button>
+				<button type = "button" id = "pomodoro-long" class = "modeSelector__Button" data-mode="long">Long Break</button>
+			</div>
 
-		<!-- Pomodoro timer display -->
-		<div id="pomodoro-container">
-			<h1 class = "pomodoro-display" id="pomodoro-display" data-mode = "work">25:00</h1>
-		</div>
+			<!-- Pomodoro timer display -->
+			<div id="pomodoro-container">
+				<h1 class = "pomodoro-display" id="pomodoro-display" data-mode = "work">25:00</h1>
+			</div>
 
-		<!-- Start/pause pomodoro buttons -->
-		<div class = "pomodoro-controlBtn">
-			<button id="mainButton">
-				<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
-			</button>
+			<!-- Start/pause pomodoro buttons -->
+			<div class = "pomodoro-controlBtn">
+				<button id="mainButton">
+					<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
+				</button>
+			</div>
 		</div>
 	</div>
 

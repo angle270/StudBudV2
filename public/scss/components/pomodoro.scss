@@ -1,0 +1,27 @@
+.pomodoro-div {
+    padding: 20px;
+    border-radius: 10px;
+    width: 50%;
+    height: 400px;  
+}
+
+.pomodoro-div button {
+    cursor: pointer;
+    background: none;
+    outline: none;
+}
+
+.pomodoro-modes {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin: 5px 10px;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+#pomodoro-container {
+    background-color: whitesmoke;
+}
+
+
