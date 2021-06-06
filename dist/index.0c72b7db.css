@@ -5,10 +5,10 @@ html {
   font-size: 100%;
 }
 /*16px*/
-body, p, input, button {
+body, p, input, button, textarea {
   font-family: "Nunito Sans", sans-serif;
   font-weight: 400;
-  line-height: 1.75;
+  line-height: 1.5;
   color: #000000;
 }
 p {
@@ -240,6 +240,43 @@ img {
 }
 #acronymlist ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+#acronymlist li {
+  margin-bottom: 10px;
+  background-color: #D7DFF5;
+  padding: 10px;
+  border-radius: 12px;
+}
+#acronymlist h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 4px;
+  border-bottom: 3px solid #204fc583;
+  color: #204fc5;
+  width: 100%;
+}
+#acronymlist p {
+  margin: 15px 0;
+  padding-left: 7px;
+}
+#acronymlist button {
+  color: #F35050;
+  background: transparent;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #F35050;
+  margin: 5px 0;
+  transition: background-color 0.1s ease;
+  transition: color 0.1s ease;
+}
+#acronymlist button:hover {
+  background-color: #F35050;
+  color: white;
 }
 .pomodoro-div {
   padding: 20px;

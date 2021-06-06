@@ -699,12 +699,12 @@ function renderAcronym(acronym) {
     // Create HTML elements
     let item = document.createElement("li");
     item.setAttribute('data-id', acronym.id);
-    item.innerHTML = "<p>" + "<h2>" + acronym.acronymWord + "</h2>" + "</p>" + "<p>" + acronym.acronymDescription + "</p>";
+    item.innerHTML = "<h2>" + acronym.acronymWord + "</h2>" + "<p>" + acronym.acronymDescription + "</p>";
     acronymlist.appendChild(item);
 
     // Extra acronyms DOM elements
     let delButton = document.createElement("button");
-    let delButtonText = document.createTextNode("Delete Acronym");
+    let delButtonText = document.createTextNode("Delete");
     delButton.appendChild(delButtonText);
     item.appendChild(delButton);
 
