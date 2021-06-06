@@ -13,7 +13,56 @@
         display: block;
         width: 100%;
     }
+
+    background-color: #E7E7E7;
+    padding: 20px;
+    border-radius: 20px;
+    height: 60vh;
 }
+
+#acronym label {
+    margin-top: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+#acronym input, textarea {
+    width: 100%;
+    padding: 5px 10px;
+    border: none;
+    border-bottom: 2px solid #3666e065;
+    border-radius: 3px;
+    resize: none;
+    transition: border-bottom 0.1s ease-in;
+}
+
+
+#acronym input:focus, textarea:focus {
+    outline: none;
+    border-bottom: 2px solid #3666e0;
+}
+
+
+.acrBtnContainer {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+#addAcronym {
+    color: white;
+    background-color: #3666E0;
+    padding: 6px 15px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.1s ease-in;
+}
+
+#addAcronym:hover{
+    background-color: #204fc5;
+}
+
 
 #acronymlist {
     grid-area: acronymlist;

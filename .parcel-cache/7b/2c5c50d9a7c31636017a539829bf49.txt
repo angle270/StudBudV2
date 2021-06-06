@@ -29,7 +29,7 @@
 80C:\Users\angel\Local Code\StudBudV2\node_modules\source-map\lib\binary-search.js132649338130000000 0
 48C:\Users\angel\Local Code\StudBudV2\package.json132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\fp\__.js132649338130000000 0
-40C:\Users\angel\Local Code\StudBudV2\dist132671644133720537 1
+40C:\Users\angel\Local Code\StudBudV2\dist132674316363490249 1
 75C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\pseudo132651852261977931 1
 105C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-minify-params\node_modules\postcss\lib\vendor.js132649338130000000 0
 46C:\Users\angel\Local Code\StudBudV2\.gitignore132651855244555374 0
@@ -111,7 +111,7 @@
 126C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-normalize-repeat-style\node_modules\postcss\lib\terminal-highlight.js132649338130000000 0
 91C:\Users\angel\Local Code\StudBudV2\node_modules\object.getownpropertydescriptors\README.md132649338130000000 0
 90C:\Users\angel\Local Code\StudBudV2\node_modules\caniuse-lite\data\features\input-range.js132649338130000000 0
-64C:\Users\angel\Local Code\StudBudV2\public\components\acronym.js132656179873638559 0
+64C:\Users\angel\Local Code\StudBudV2\public\components\acronym.js132672593016399903 0
 83C:\Users\angel\Local Code\StudBudV2\node_modules\cosmiconfig\dist\createExplorer.js132649338130000000 0
 75C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-minify-params\dist132651853850306743 1
 102C:\Users\angel\Local Code\StudBudV2\node_modules\jsdom\lib\jsdom\living\generated\CanPlayTypeResult.js132649338130000000 0
@@ -131,7 +131,7 @@
 62C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\min.js132649338130000000 0
 90C:\Users\angel\Local Code\StudBudV2\node_modules\highlight.js\scss\stackoverflow-dark.scss132649338130000000 0
 88C:\Users\angel\Local Code\StudBudV2\node_modules\cssstyle\lib\properties\outlineColor.js132649338130000000 0
-72C:\Users\angel\Local Code\StudBudV2\public\scss\components\tasklist.scss132654330922540000 0
+72C:\Users\angel\Local Code\StudBudV2\public\scss\components\tasklist.scss132672588818998382 0
 92C:\Users\angel\Local Code\StudBudV2\node_modules\stylehacks\node_modules\postcss\lib\root.js132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\snapdragon-node132651854463356205 1
 71C:\Users\angel\Local Code\StudBudV2\node_modules\is-nan\test\shimmed.js132649338130000000 0
@@ -139,7 +139,7 @@
 113C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-discard-comments\node_modules\postcss\lib\lazy-result.js132649338130000000 0
 51C:\Users\angel\Local Code\StudBudV2\node_modules\ws132651854714530151 1
 117C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-normalize-positions\node_modules\supports-color\package.json132649338130000000 0
-53C:\Users\angel\Local Code\StudBudV2\public\index.html132671644130904263 0
+53C:\Users\angel\Local Code\StudBudV2\public\index.html132674316246092978 0
 109C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-modules-values\node_modules\postcss\lib\container.js132649338130000000 0
 69C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\es\README.md132649338130000000 0
 95C:\Users\angel\Local Code\StudBudV2\node_modules\@babel\plugin-syntax-numeric-separator\LICENSE132649338130000000 0
@@ -254,7 +254,7 @@
 108C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-discard-duplicates\node_modules\postcss\lib\list.js132649338130000000 0
 75C:\Users\angel\Local Code\StudBudV2\node_modules\regenerate\LICENSE-MIT.txt132649338130000000 0
 73C:\Users\angel\Local Code\StudBudV2\node_modules\terser\tools\terser.d.ts132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\public\scss\typography.scss132663942631863768 0
+63C:\Users\angel\Local Code\StudBudV2\public\scss\typography.scss132672522830840982 0
 93C:\Users\angel\Local Code\StudBudV2\node_modules\bl\node_modules\inherits\inherits_browser.js132649338130000000 0
 55C:\Users\angel\Local Code\StudBudV2\node_modules\is-nan132651852969685874 1
 77C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\stable\math\asinh.js132649338130000000 0
@@ -269,12 +269,12 @@
 59C:\Users\angel\Local Code\StudBudV2\node_modules\pascalcase132651853630778175 1
 80C:\Users\angel\Local Code\StudBudV2\node_modules\htmlnano\lib\presets\ampSafe.js132649338130000000 0
 104C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-merge-longhand\node_modules\chalk\index.js.flow132649338130000000 0
-71C:\Users\angel\Local Code\StudBudV2\public\scss\components\acronym.scss132654345977594429 0
+71C:\Users\angel\Local Code\StudBudV2\public\scss\components\acronym.scss132672596449642369 0
 81C:\Users\angel\Local Code\StudBudV2\node_modules\core-js\es\array\reduce-right.js132649338130000000 0
 72C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\_baseAssignIn.js132649338130000000 0
 82C:\Users\angel\Local Code\StudBudV2\node_modules\css-declaration-sorter\license.md132649338130000000 0
 111C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-normalize-whitespace\node_modules\ansi-styles\index.js132649338130000000 0
-70C:\Users\angel\Local Code\StudBudV2\public\scss\components\kanban.scss132671643010602149 0
+70C:\Users\angel\Local Code\StudBudV2\public\scss\components\kanban.scss132674315454551341 0
 106C:\Users\angel\Local Code\StudBudV2\node_modules\@babel\runtime\helpers\esm\classExtractFieldDescriptor.js132649338130000000 0
 68C:\Users\angel\Local Code\StudBudV2\node_modules\lodash\_baseFill.js132649338130000000 0
 116C:\Users\angel\Local Code\StudBudV2\node_modules\postcss-modules-values\node_modules\postcss\lib\css-syntax-error.js132649338130000000 0
@@ -13949,7 +13949,7 @@
 67C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.eslintrc132649338130000000 0
 64C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\.nycrc132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\CHANGELOG.md132649338130000000 0
-62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132671644133667884 0
+62C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js.map132674316363466515 0
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-regex\index.js132649338130000000 0
 84C:\Users\angel\Local Code\StudBudV2\node_modules\caniuse-lite\data\features\proxy.js132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\css-tree\lib\syntax\node\HexColor.js132649338130000000 0
@@ -14147,7 +14147,7 @@
 66C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\LICENSE132649338130000000 0
 85C:\Users\angel\Local Code\StudBudV2\node_modules\highlight.js\scss\androidstudio.scss132649338130000000 0
 71C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\package.json132649338130000000 0
-63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132671644133667884 0
+63C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css.map132674316363456158 0
 73C:\Users\angel\Local Code\StudBudV2\node_modules\is-bigint\test\.eslintrc132649338130000000 0
 83C:\Users\angel\Local Code\StudBudV2\node_modules\cssnano-util-raw-cache\LICENSE-MIT132649338130000000 0
 70C:\Users\angel\Local Code\StudBudV2\node_modules\caller-path\readme.md132649338130000000 0
@@ -21150,9 +21150,9 @@
 59C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.cmd132649338130000000 0
 63C:\Users\angel\Local Code\StudBudV2\node_modules\.bin\which.ps1132649338130000000 0
-59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132671644133486595 0
-58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132671644133486595 0
-51C:\Users\angel\Local Code\StudBudV2\dist\index.html132671644133486595 0
+59C:\Users\angel\Local Code\StudBudV2\dist\index.0c72b7db.css132674316363329695 0
+58C:\Users\angel\Local Code\StudBudV2\dist\index.8a5bc16d.js132674316363334919 0
+51C:\Users\angel\Local Code\StudBudV2\dist\index.html132674316363313056 0
 64C:\Users\angel\Local Code\StudBudV2\dist\Just_Awake.19996959.mp3132656199375991514 0
 56C:\Users\angel\Local Code\StudBudV2\audio\Just_Awake.mp3132656135943454451 0
 56C:\Users\angel\Local Code\StudBudV2\audio\late_night.mp3132656138558688079 0

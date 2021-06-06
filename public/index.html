@@ -21,7 +21,6 @@
 	</nav>
 
 	<div id="tasks" class = "page-container">
-		<h1>Task List</h1>
 		<div id="task-grid">
 			<form id="taskform">
 				<label for="task">Task:</label>
@@ -50,11 +49,14 @@
 
 				<br>
 
-				<button type="submit">Add Task</button>
+				<div class="taskButtonContainer">
+					<button type="submit" id = "addTask">Add Task</button>
+				</div>
+				
 			</form>
 			<div id="tasklist">
-				<p id="emptyTaskList">You have not added any tasks yet.</p>
-				<ul></ul>
+				<p>You have not added any tasks yet.</p>
+				<ul id="emptyTaskList"></ul>
 			</div>
 		</div>
 	</div>
@@ -81,10 +83,9 @@
 			<!-- To do lists -->
 			<div class="status" id="no_status">
 			  <h1>No Status</h1>
-
 			  <div class="todo" draggable="true">
 			  </div>
-			  
+
 			</div>
 
 			<div class="status">
@@ -144,7 +145,6 @@
 	</div>
 
 	<div id = "acronym" class= "page-container">
-		<h1>Acronym Maker</h1>
 		<div id = "acronym-grid">
 			<form id = "acronymform">
 				<!-- Word input -->
@@ -154,8 +154,11 @@
 				<!-- Description input -->
 				<label for="desc">Description:</label>
 				<textarea name="desc" id="descInput" cols="30" rows="10"></textarea>
-
-				<button type="submit">Add Acronym</button>
+				
+				<div class="acrBtnContainer">
+					<button type="submit" id = "addAcronym">Add Acronym</button>
+				</div>
+				
 			</form>
 			<div id="acronymlist">
 				<p id="emptyAcronymList">You have not added any acronyms yet.</p>
