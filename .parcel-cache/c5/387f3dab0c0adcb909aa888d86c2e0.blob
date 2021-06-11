@@ -63,7 +63,6 @@ nav {
   top: 30px;
   left: 10px;
   display: flex;
-  border-radius: 40px;
   justify-content: space-around;
   align-items: center;
 }
@@ -93,6 +92,23 @@ nav .nav-links .nav-item a.active {
   background-color: #2646B8;
 }
 
+@media only screen and (max-width: 600px) {
+  nav {
+    width: 100%;
+    height: 120px;
+    top: 0;
+    left: 0;
+  }
+  nav .nav-links {
+    flex-direction: row;
+  }
+  nav .nav-links .nav-item a {
+    margin: 0 5px;
+    padding: 10px 5px;
+    width: 90px;
+    font-size: 0.9rem;
+  }
+}
 .app-container {
   padding-left: 120px;
 }
@@ -107,15 +123,22 @@ nav .nav-links .nav-item a.active {
   display: none;
 }
 
-#starBg {
+#background {
   position: fixed;
+  min-width: 100%;
+  min-height: 100%;
   top: 0;
   left: 0;
   z-index: -1;
   opacity: 0.8;
-  filter: blur(1px);
 }
 
+@media only screen and (max-width: 600px) {
+  .app-container {
+    padding-left: 0;
+    margin-top: 120px;
+  }
+}
 /* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
 html {
   box-sizing: border-box;
@@ -179,8 +202,7 @@ img {
   font-size: 0.9rem;
   font-weight: 500;
 }
-
-#tasks input, #priorityInput {
+#tasks input, #tasks #priorityInput {
   width: 100%;
   padding: 5px 10px;
   border: none;
@@ -188,8 +210,7 @@ img {
   border-radius: 3px;
   transition: border-bottom 0.1s ease-in;
 }
-
-#tasks input:focus, #priorityInput:focus {
+#tasks input:focus, #tasks #priorityInput:focus {
   outline: none;
   border-bottom: 2px solid #3666e0;
 }
@@ -209,7 +230,6 @@ img {
   cursor: pointer;
   transition: background-color 0.1s ease-in;
 }
-
 #addTask:hover {
   background-color: #204fc5;
 }
@@ -258,6 +278,31 @@ img {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  #task-grid {
+    gap: 0px 10px;
+  }
+
+  #taskform {
+    position: relative;
+    left: -40px;
+    max-width: 220px;
+  }
+  #taskform label {
+    width: 100%;
+  }
+
+  #tasks {
+    font-size: 0.8rem;
+  }
+
+  #tasklist h2 {
+    font-size: 1rem;
+  }
+  #tasklist p {
+    font-size: 0.9rem;
+  }
+}
 #acronym-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -364,6 +409,31 @@ img {
   color: white;
 }
 
+@media only screen and (max-width: 600px) {
+  #acronym-grid {
+    gap: 0px 10px;
+  }
+
+  #acronymform {
+    position: relative;
+    left: -40px;
+    max-width: 220px;
+  }
+  #acronymform label {
+    width: 100%;
+  }
+
+  #acronym {
+    font-size: 0.8rem;
+  }
+
+  #acronymlist h2 {
+    font-size: 1rem;
+  }
+  #acronymlist p {
+    font-size: 0.9rem;
+  }
+}
 #timer-container {
   display: flex;
   justify-content: center;
@@ -456,6 +526,13 @@ img {
   color: #A37FC0;
 }
 
+@media only screen and (max-width: 750px) {
+  .pomodoro-modes button {
+    font-size: 0.9rem;
+    width: 150px;
+    margin: 15px 10px;
+  }
+}
 footer {
   position: fixed;
   width: 100%;
@@ -507,12 +584,15 @@ footer {
 }
 
 .music-info {
-  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   margin: 0 10px;
 }
 .music-info h4 {
   font-size: 1.1rem;
+  margin-bottom: 10px;
   font-style: italic;
 }
 
@@ -520,11 +600,29 @@ footer {
   background: white;
   border-radius: 5px;
   cursor: pointer;
-  margin: 10px 0;
   height: 2px;
   width: 100%;
 }
 
+@media only screen and (max-width: 600px) {
+  .music-container {
+    height: 70px;
+  }
+
+  .action-btn {
+    font-size: 10px;
+    padding: 8px;
+    border: 2px solid #4D137A;
+    margin: 0 6px;
+  }
+  .action-btn.action-btn-big {
+    font-size: 14px;
+  }
+
+  .music-info h4 {
+    margin-bottom: 5px;
+  }
+}
 * {
   box-sizing: border-box;
 }
@@ -548,11 +646,6 @@ footer {
   position: relative;
   padding: 60px 1rem 0.5rem;
 }
-
-.status:nth-child(even) {
-  background-color: #E5E4EB;
-}
-
 .status h1 {
   position: absolute;
   top: 0;
@@ -563,6 +656,10 @@ footer {
   margin: 0;
   width: 100%;
   padding: 0.5rem 1rem;
+}
+
+.status:nth-child(even) {
+  background-color: #E5E4EB;
 }
 
 #add-btn {
@@ -576,7 +673,6 @@ footer {
   border-radius: 4px;
   cursor: pointer;
 }
-
 #add-btn:hover {
   background-color: #aaa;
 }
@@ -592,7 +688,6 @@ footer {
   padding: 5px 10px;
   margin: 0.5rem 0;
 }
-
 .todo .close {
   position: absolute;
   right: 1rem;
@@ -602,7 +697,6 @@ footer {
   cursor: pointer;
   transition: color 0.2s ease;
 }
-
 .todo .close:hover {
   color: #343444;
 }
@@ -621,7 +715,6 @@ footer {
   background-color: #fff;
   margin-right: 20px;
 }
-
 .modal .header {
   display: flex;
   justify-content: space-between;
@@ -630,7 +723,6 @@ footer {
   padding: 0.5rem;
   background-color: rgba(0, 0, 0, 0.05);
 }
-
 .modal .body {
   padding: 0.75rem;
 }
@@ -644,7 +736,6 @@ footer {
   background-color: rgba(0, 0, 0, 0.05);
   transition: border-bottom 0.1s ease-in;
 }
-
 #todo-input:focus {
   outline: none;
   border-bottom: 2px solid #3666e0;
@@ -660,7 +751,36 @@ footer {
   margin-left: 5px;
   transition: background-color 0.1s ease-in;
 }
-
 #todo-submit:hover {
   background-color: #204fc5;
+}
+
+@media only screen and (max-width: 1300px) {
+  .status {
+    width: 80%;
+    height: 70vh;
+  }
+  .status h1 {
+    font-size: 1.2rem;
+  }
+
+  .kanban-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .modal {
+    width: 60%;
+    margin-bottom: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .modal {
+    width: 80%;
+  }
+
+  .status {
+    width: 100%;
+  }
 }

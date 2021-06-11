@@ -9,6 +9,7 @@
     grid-area: taskform;
     max-width: 300px;
     margin: 0 auto;
+
     label {
         display: block;
         width: 100%;
@@ -20,25 +21,31 @@
     height: 60vh;
 }
 
-#tasks label {
-    margin-top: 15px;
-    font-size: 0.9rem;
-    font-weight: 500;
+#tasks {
+
+    label {
+        margin-top: 15px;
+        font-size: 0.9rem;
+        font-weight: 500;
+    }
+
+    input, #priorityInput {
+        width: 100%;
+        padding: 5px 10px;
+        border: none;
+        border-bottom: 2px solid #3666e065;
+        border-radius: 3px;
+        transition: border-bottom 0.1s ease-in;
+
+
+        &:focus {
+            outline: none;
+            border-bottom: 2px solid #3666e0;
+        }
+    }
+
 }
 
-#tasks input, #priorityInput {
-    width: 100%;
-    padding: 5px 10px;
-    border: none;
-    border-bottom: 2px solid #3666e065;
-    border-radius: 3px;
-    transition: border-bottom 0.1s ease-in;
-}
-
-#tasks input:focus, #priorityInput:focus {
-    outline: none;
-    border-bottom: 2px solid #3666e0;
-}
 
 .taskButtonContainer {
     margin: 20px 0;
@@ -54,10 +61,10 @@
     border-radius: 3px;
     cursor: pointer;
     transition: background-color 0.1s ease-in;
-}
 
-#addTask:hover{
-    background-color: #204fc5;
+    &:hover {
+        background-color: #204fc5;
+    }
 }
 
 
@@ -112,5 +119,37 @@
         }
     }
 
+}
+
+@media only screen and (max-width: 600px) {
+    #task-grid {
+        gap: 0px 10px;
+    }
+
+    #taskform {
+        position: relative;
+        left: -40px;
+
+        label {
+            width: 100%;
+        }
+
+        max-width: 220px;
+    }
+
+    #tasks {
+        font-size: 0.8rem;
+    }
+
+    #tasklist { 
+
+        h2 {
+            font-size: 1rem;
+        }
+
+        p {
+            font-size: 0.9rem;
+        }
+    }
 }
 

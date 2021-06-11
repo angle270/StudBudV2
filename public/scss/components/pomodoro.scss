@@ -54,6 +54,13 @@
     }
 }
 
+@media only screen and (max-width: 750px) {
+    .pomodoro-modes button {
+        font-size: 0.9rem;
+        width: 150px;
+        margin: 15px 10px;
+    }
+}
 
 
 
