@@ -9,22 +9,31 @@ nav {
     border-radius: 40px;
     justify-content: space-around;
     align-items: center;
-    background-color: rgb(215, 218, 250);
     .nav-links {
         list-style: none;
         display: flex;
         flex-direction: column;
+        
         .nav-item a {
             display: inline-block;
             text-decoration: none;
-            color: black;
-            padding: 2em 0;
+            color: white;
+            margin: 20px 0;
+            width: 100px;
+            padding: 20px 8px;
+            border-radius: 30px;
+            display: flex;
+            justify-content: center ;
+            background-color: #3666E0;
+            transition: background-color 0.2s ease;
+            
 
             &:hover {
-                color: cadetblue;
+                background-color: #2646B8;
             }
             &.active {
                 font-weight: bold;
+                background-color: #2646B8;
             }
         }
     }

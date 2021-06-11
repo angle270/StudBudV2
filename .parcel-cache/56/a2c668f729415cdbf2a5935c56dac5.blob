@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width">
+	<title>StudBud</title>
+	<link rel="stylesheet" href="4c97b496a5bf977dfd686f645be3b650">
+	<link href="ac2b17b88ef0ab3e3e3316d5a6be3892" rel="stylesheet" type="text/css">
+</head>
+
+<body class="app-container">
+	<nav class="top-nav">
+		<ul class="nav-links">
+			<li class="nav-item"><a href="#tasks" class="active">Tasks</a></li>
+			<li class="nav-item"><a href="#kanban">Kanban</a></li>
+			<li class="nav-item"><a href="#pomodoro">Pomodoro</a></li>
+			<li class="nav-item"><a href="#timer">Timer</a></li>
+			<li class="nav-item"><a href="#acronym">Acronym</a></li>
+		</ul>
+	</nav>
+
+	<div id="tasks" class="page-container">
+		<div id="task-grid">
+			<form id="taskform">
+				<label for="task">Task:</label>
+				<input type="text" name="task" id="taskInput" required="">
+
+				<!-- Date input -->
+				<label for="dueDate">Due Date: </label>
+				<input type="date" name="dueDate" id="dueDateInput">
+
+				<!-- Time input -->
+				<label for="completionTime">Completion Time: </label>
+				<input type="time" name="completionTime" id="completionTimeInput">
+
+				<label for="estimatedTime">Estimated completion time (in mins):</label>
+				<input type="number" name="estimatedTime" id="estimatedTimeInput">
+				<!-- Priority -->
+
+
+				<label for="priority">Task Priority:</label>
+				<select name="prority" id="priorityInput">
+					<option value="">Select one</option>
+					<option value="Low">Low</option>
+					<option value="Medium">Medium</option>
+					<option value="High">High</option>
+				</select>
+
+				<br>
+
+				<div class="taskButtonContainer">
+					<button type="submit" id="addTask">Add Task</button>
+				</div>
+				
+			</form>
+			<div id="tasklist">
+				<p id="emptyTaskList">You have not added any tasks yet.</p>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+
+	<div id="kanban" class="page-container">
+
+		<div class="kanban-container">
+
+			<!-- Task Adder -->
+			<div class="modal" id="todo_form">
+
+				<div class="header">
+				  <div class="title">Add Task</div>
+				</div>
+
+				<div class="body">
+				  <input type="text" id="todo-input">
+				  <input type="submit" value="+" id="todo-submit">
+				</div>
+
+			</div>
+
+			
+			<!-- To do lists -->
+			<div class="status" id="no_status">
+			  <h1>No Status</h1>
+			  <div class="todo" draggable="true">
+			  </div>
+
+			</div>
+
+			<div class="status">
+			  <h1>Not Started</h1>
+			</div>
+
+			<div class="status">
+			  <h1>In Progress</h1>
+			</div>
+
+			<div class="status">
+			  <h1>Completed</h1>
+			</div>
+
+		  </div>
+	</div>
+
+	<div id="pomodoro" class="page-container">
+		<div class="pomodoro-div">
+			<!-- Pomodoro button modes -->
+			<div class="pomodoro-modes">
+				<button type="button" id="pomodoro-work" class="modeSelector__Button active" data-mode="work">Work</button>
+				<button type="button" id="pomodoro-short" class="modeSelector__Button" data-mode="short">Short Break</button>
+				<button type="button" id="pomodoro-long" class="modeSelector__Button" data-mode="long">Long Break</button>
+			</div>
+
+			<!-- Pomodoro timer display -->
+			<div id="pomodoro-container">
+				<h1 class="pomodoro-display" id="pomodoro-display" data-mode="work">25:00</h1>
+			</div>
+
+			<!-- Start/pause pomodoro buttons -->
+			<div class="pomodoro-controlBtn">
+				<button id="mainButton">
+					<i class="fa fa-play" id="toggle" data-paused="true" aria-hidden="true"></i>
+				</button>
+			</div>
+		</div>
+	</div>
+
+	<div id="timer" class="page-container">
+		<!-- Timer display -->
+		<div id="timer-container">
+			<h1 id="timer-display">00:00:00</h1>
+		</div>
+
+		<!-- Timer buttons -->
+		<div class="timer-btns">
+			<button type="button" id="timer-start">Start</button>
+			<button type="button" id="timer-stop">Stop</button>
+			<button type="button" id="timer-reset">Reset</button>
+		</div>
+	</div>
+
+	<div id="acronym" class="page-container">
+		<div id="acronym-grid">
+			<form id="acronymform">
+				<!-- Word input -->
+				<label for="word">Word:</label>
+				<input type="text" name="word" id="wordInput" required="">
+
+				<!-- Description input -->
+				<label for="desc">Description:</label>
+				<textarea name="desc" id="descInput" cols="30" rows="10"></textarea>
+				
+				<div class="acrBtnContainer">
+					<button type="submit" id="addAcronym">Add Acronym</button>
+				</div>
+				
+			</form>
+			<div id="acronymlist">
+				<p id="emptyAcronymList">You have not added any acronyms yet.</p>
+				<ul></ul>
+			</div>
+		</div>
+	</div>
+
+</body>
+
+<footer>
+	<div class="music-container">
+	
+		<audio src="00aee38c9e91b3bb99fd64d5064474c6" id="audio"></audio>
+	
+		<div class="music-nav">
+			<button id="prev" class="action-btn">
+				<i class="fas fa-backward"></i>
+			</button>
+			<button id="play" class="action-btn action-btn-big">
+				<i class="fas fa-play"></i>
+			</button>
+			<button id="next" class="action-btn">
+				<i class="fas fa-forward"></i>
+			</button>
+		</div>
+
+		<div class="music-info">
+			<h4 id="title">Testing Song</h4>
+			
+			<div class="progress-container">
+				<div class="progress"></div>
+			</div>
+		</div>
+
+	</div>
+</footer>
+
+<script src="4e6340146f7d0152c44dbd6ccf58b0e0" data-parcel-key="8bdc68dc380d216c08c21613c3e3a4ac">
+</script>
+</html>

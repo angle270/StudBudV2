@@ -66,7 +66,6 @@ nav {
   border-radius: 40px;
   justify-content: space-around;
   align-items: center;
-  background-color: #d7dafa;
 }
 nav .nav-links {
   list-style: none;
@@ -76,14 +75,22 @@ nav .nav-links {
 nav .nav-links .nav-item a {
   display: inline-block;
   text-decoration: none;
-  color: black;
-  padding: 2em 0;
+  color: white;
+  margin: 20px 0;
+  width: 100px;
+  padding: 20px 8px;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  background-color: #3666E0;
+  transition: background-color 0.2s ease;
 }
 nav .nav-links .nav-item a:hover {
-  color: cadetblue;
+  background-color: #2646B8;
 }
 nav .nav-links .nav-item a.active {
   font-weight: bold;
+  background-color: #2646B8;
 }
 
 .app-container {
@@ -98,6 +105,15 @@ nav .nav-links .nav-item a.active {
 }
 .page-container:not(#home) {
   display: none;
+}
+
+#starBg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  opacity: 0.8;
+  filter: blur(1px);
 }
 
 /* https://www.digitalocean.com/community/tutorials/css-minimal-css-reset */
@@ -200,13 +216,46 @@ img {
 
 #tasklist {
   grid-area: tasklist;
-  background-color: whitesmoke;
-  padding: 20px;
-  border-radius: 20px;
-  height: 60vh;
 }
 #tasklist ul {
   list-style: none;
+  display: flex;
+  flex-direction: column;
+}
+#tasklist li {
+  margin-bottom: 10px;
+  background-color: #D7DFF5;
+  padding: 10px;
+  border-radius: 12px;
+}
+#tasklist h2 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  font-style: italic;
+  padding: 4px;
+  border-bottom: 3px solid #204fc583;
+  color: #204fc5;
+  width: 100%;
+}
+#tasklist p {
+  margin: 7px 0;
+  padding-left: 7px;
+}
+#tasklist button {
+  color: #F35050;
+  background: transparent;
+  padding: 4px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  border: 1px solid #F35050;
+  margin: 5px 0;
+  transition: background-color 0.1s ease;
+  transition: color 0.1s ease;
+}
+#tasklist button:hover {
+  background-color: #F35050;
+  color: white;
 }
 
 #acronym-grid {
@@ -315,30 +364,96 @@ img {
   color: white;
 }
 
-.pomodoro-div {
-  padding: 20px;
-  border-radius: 10px;
-  width: 50%;
-  height: 400px;
-}
-
-.pomodoro-div button {
-  cursor: pointer;
-  background: none;
-  outline: none;
-}
-
-.pomodoro-modes {
+#timer-container {
   display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-  margin: 5px 10px;
-  padding: 5px 10px;
-  border-radius: 5px;
+  justify-content: center;
+}
+#timer-container #timer-display {
+  font-size: 5rem;
+  font-weight: 700;
+  width: 400px;
+  display: flex;
+  justify-content: center;
+  background: #da98fa;
+  background: linear-gradient(176deg, #da98fa 0%, #e8a0f3 44%, rgba(239, 149, 219, 0.3926164216) 100%);
+  padding: 20px 30px;
+  border-radius: 20px;
+  color: #7A2EB6;
 }
 
-#pomodoro-container {
-  background-color: whitesmoke;
+.timer-btns {
+  display: flex;
+  justify-content: center;
+  margin-top: 15px;
+}
+.timer-btns button {
+  font-size: 1.2rem;
+  margin: 15px 20px;
+  background-color: #9F61CF;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.timer-btns button:hover {
+  background-color: #E8D7F5;
+  color: #A37FC0;
+}
+
+.pomodoro-modes, #pomodoro-container, .pomodoro-controlBtn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.pomodoro-modes button, #pomodoro-container button, .pomodoro-controlBtn button {
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+}
+
+.pomodoro-modes button {
+  font-size: 1.1rem;
+  margin: 15px 20px;
+  width: 130px;
+  background-color: #9F61CF;
+  outline: none;
+  cursor: pointer;
+  padding: 6px 15px;
+  border: none;
+  border-radius: 30px;
+  color: white;
+  transition: background-color 0.2s ease;
+  transition: color 0.2s ease;
+}
+.pomodoro-modes button:hover {
+  background-color: #E8D7F5;
+  color: #A37FC0;
+}
+
+#pomodoro-display {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+  width: 400px;
+  color: #7A2EB6;
+  padding: 20px 30px;
+  border-radius: 20px;
+  font-size: 5rem;
+  font-weight: 700;
+  background: #da98fa;
+  background: linear-gradient(176deg, #da98fa 0%, #e8a0f3 44%, rgba(239, 149, 219, 0.3926164216) 100%);
+}
+
+#mainButton {
+  font-size: 2.5rem;
+  color: #7A2EB6;
+}
+#mainButton:hover {
+  color: #A37FC0;
 }
 
 footer {
@@ -349,11 +464,12 @@ footer {
 }
 
 .music-container {
-  background-color: cornsilk;
-  border-radius: 20px;
+  background: #a0a9f8;
+  background: linear-gradient(176deg, rgba(160, 169, 248, 0.6727284664) 0%, rgba(177, 137, 227, 0.6895351891) 44%, rgba(194, 154, 245, 0.4318321078) 100%);
   display: flex;
   padding: 20px 30px;
-  margin: 10px 0;
+  border-radius: 30px 30px 0 0;
+  height: 80px;
 }
 
 .music-nav {
@@ -361,23 +477,32 @@ footer {
   align-items: center;
   justify-content: center;
 }
+.music-nav #prev:active, .music-nav #next:active {
+  border-color: #9F61CF;
+  color: #9F61CF;
+}
+.music-nav #play:focus {
+  border-color: #9F61CF;
+  color: #9F61CF;
+}
 
 .action-btn {
-  background-color: white;
-  color: #dfdbdf;
-  border: 0;
+  background-color: transparent;
+  color: #4D137A;
   font-size: 15px;
   cursor: pointer;
   padding: 10px;
   margin: 0 10px;
+  border: 3px solid #4D137A;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
 }
-
 .action-btn:focus {
   outline: 0;
 }
-
-.action-btn-big {
-  color: #cdc2d0;
+.action-btn.action-btn-big {
+  color: #4D137A;
   font-size: 20px;
 }
 
@@ -385,7 +510,10 @@ footer {
   position: relative;
   width: 100%;
   margin: 0 10px;
-  padding: 3px;
+}
+.music-info h4 {
+  font-size: 1.1rem;
+  font-style: italic;
 }
 
 .progress-container {
@@ -393,7 +521,7 @@ footer {
   border-radius: 5px;
   cursor: pointer;
   margin: 10px 0;
-  height: 4px;
+  height: 2px;
   width: 100%;
 }
 

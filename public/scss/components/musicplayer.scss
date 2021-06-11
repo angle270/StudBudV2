@@ -3,50 +3,69 @@ footer {
     width: 100%;
     bottom: 0px;
     left: 0px;
-    // flex-direction: column;
-    // align-items: center;
-    // justify-content: center;
 }
 
 .music-container {
-    background-color: cornsilk;
-    border-radius: 20px;
+    background: rgb(160,169,248);
+    background: linear-gradient(176deg, rgba(160,169,248,0.6727284663865547) 0%, rgba(177,137,227,0.6895351890756303) 44%, rgba(194,154,245,0.4318321078431373) 100%);
     display: flex;
     padding: 20px 30px;
-    margin: 10px 0;
+    border-radius: 30px 30px 0 0;
+    height: 80px
 }
 
 .music-nav {
     display: flex;
     align-items: center;
     justify-content: center;
+
+    #prev, #next {
+        &:active {
+            border-color: #9F61CF;
+            color: #9F61CF;
+        }
+    }
+
+    #play {
+        &:focus {
+            border-color: #9F61CF;
+            color: #9F61CF;
+        }
+    }
 }
 
 .action-btn {
-    background-color: white;
-    color: #dfdbdf;
-    border: 0;
+    background-color: transparent;
+    color: #4D137A;
     font-size: 15px;
     cursor: pointer;
     padding: 10px;
     margin: 0 10px;
+    border: 3px solid #4D137A;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
 
-}
+    &:focus {
+        outline: 0;
+    }
 
-.action-btn:focus {
-    outline: 0;
-}
+    &.action-btn-big {
+        color: #4D137A;
+        font-size: 20px;
+    }
 
-.action-btn-big {
-    color: #cdc2d0;
-    font-size: 20px;
 }
 
 .music-info {
     position: relative;
     width: 100%;
     margin: 0 10px;
-    padding: 3px;
+     
+    h4 {
+        font-size: 1.1rem;
+        font-style: italic;
+    }
 }
 
 .progress-container {
@@ -54,14 +73,7 @@ footer {
     border-radius: 5px;
     cursor: pointer;
     margin: 10px 0;
-    height: 4px;
+    height: 2px;
     width: 100%;
 }
 
-// .progress {
-//     background-color: white;
-//     border-radius: 5px;
-//     height: 100%;
-//     width: 0%;
-//     transition: width 0.1 linear;
-// }
